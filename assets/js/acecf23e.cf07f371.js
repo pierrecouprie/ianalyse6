@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkianalyse=globalThis.webpackChunkianalyse||[]).push([[1903],{1912(a){a.exports=JSON.parse('{"blogBasePath":"/ianalyse6/blog","blogTitle":"Blog","authorsListPath":"/ianalyse6/blog/authors"}')}}]);
