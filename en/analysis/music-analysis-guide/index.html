@@ -3,14 +3,732 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
-<title data-rh="true">Music Analysis Guide | iAnalyse 6</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://pierrecouprie.github.io/ianalyse6/en/analysis/music-analysis-guide"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Music Analysis Guide | iAnalyse 6"><link data-rh="true" rel="icon" href="/ianalyse6/en/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://pierrecouprie.github.io/ianalyse6/en/analysis/music-analysis-guide"><link data-rh="true" rel="alternate" href="https://pierrecouprie.github.io/ianalyse6/analysis/music-analysis-guide" hreflang="fr"><link data-rh="true" rel="alternate" href="https://pierrecouprie.github.io/ianalyse6/en/analysis/music-analysis-guide" hreflang="en"><link data-rh="true" rel="alternate" href="https://pierrecouprie.github.io/ianalyse6/analysis/music-analysis-guide" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Music Analysis Guide","item":"https://pierrecouprie.github.io/ianalyse6/en/analysis/music-analysis-guide"}]}</script><link rel="stylesheet" href="/ianalyse6/en/assets/css/styles.585fa8c5.css">
-<script src="/ianalyse6/en/assets/js/runtime~main.0bd6fbfa.js" defer="defer"></script>
-<script src="/ianalyse6/en/assets/js/main.991d2f53.js" defer="defer"></script>
+<title data-rh="true">Musical analysis guide | iAnalyse 6</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://pierrecouprie.github.io/ianalyse6/en/analysis/music-analysis-guide"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Musical analysis guide | iAnalyse 6"><meta data-rh="true" name="description" content="This guide connects representations, audio descriptors, score and video annotation, and analytical uses of iAnalyse. It is neither a treatise on musical acoustics nor a fixed analytical method. Its aim is to show how signal processing and multimodal annotation can support musicological work grounded in listening, observation, comparison and interpretation."><meta data-rh="true" property="og:description" content="This guide connects representations, audio descriptors, score and video annotation, and analytical uses of iAnalyse. It is neither a treatise on musical acoustics nor a fixed analytical method. Its aim is to show how signal processing and multimodal annotation can support musicological work grounded in listening, observation, comparison and interpretation."><link data-rh="true" rel="icon" href="/ianalyse6/en/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://pierrecouprie.github.io/ianalyse6/en/analysis/music-analysis-guide"><link data-rh="true" rel="alternate" href="https://pierrecouprie.github.io/ianalyse6/analysis/music-analysis-guide" hreflang="fr"><link data-rh="true" rel="alternate" href="https://pierrecouprie.github.io/ianalyse6/en/analysis/music-analysis-guide" hreflang="en"><link data-rh="true" rel="alternate" href="https://pierrecouprie.github.io/ianalyse6/analysis/music-analysis-guide" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Musical analysis guide","item":"https://pierrecouprie.github.io/ianalyse6/en/analysis/music-analysis-guide"}]}</script><link rel="stylesheet" href="/ianalyse6/en/assets/css/styles.585fa8c5.css">
+<script src="/ianalyse6/en/assets/js/runtime~main.30876c90.js" defer="defer"></script>
+<script src="/ianalyse6/en/assets/js/main.1badb297.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>document.documentElement.setAttribute("data-theme","light"),document.documentElement.setAttribute("data-theme-choice","light"),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/ianalyse6/en/"><b class="navbar__title text--truncate">iAnalyse 6</b></a><a class="navbar__item navbar__link" href="/ianalyse6/en/macos/getting-started/overview">macOS Documentation</a><a class="navbar__item navbar__link" href="/ianalyse6/en/ipados/getting-started/overview">iPadOS Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/ianalyse6/analysis/music-analysis-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="fr">Français</a></li><li><a href="/ianalyse6/en/analysis/music-analysis-guide" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en">English</a></li></ul></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ianalyse6/en/"><span title="Home" class="linkLabel_WmDU">Home</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/ianalyse6/en/analysis/music-analysis-guide"><span title="Music Analysis Guide" class="linkLabel_WmDU">Music Analysis Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ianalyse6/en/analysis/audio-representations"><span title="Audio Representations" class="linkLabel_WmDU">Audio Representations</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ianalyse6/en/analysis/audio-descriptors"><span title="Audio Descriptors" class="linkLabel_WmDU">Audio Descriptors</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/ianalyse6/en/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Music Analysis Guide</span></li></ul></nav><div class="theme-doc-markdown markdown"><header><h1>Music Analysis Guide</h1></header></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/ianalyse6/en/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Home</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/ianalyse6/en/analysis/audio-representations"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Audio Representations</div></a></nav></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__links text--center"><div class="footer__links"><a class="footer__link-item" href="/ianalyse6/en/privacy">Privacy Policy</a><span class="footer__link-separator">·</span><a class="footer__link-item" href="/ianalyse6/en/support">Support</a></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2026 Pierre Couprie</div></div></div></footer></div>
+<script>document.documentElement.setAttribute("data-theme","light"),document.documentElement.setAttribute("data-theme-choice","light"),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/ianalyse6/en/"><b class="navbar__title text--truncate">iAnalyse 6</b></a><a class="navbar__item navbar__link" href="/ianalyse6/en/macos/getting-started/overview">macOS Documentation</a><a class="navbar__item navbar__link" href="/ianalyse6/en/ipados/getting-started/overview">iPadOS Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/ianalyse6/analysis/music-analysis-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="fr">Français</a></li><li><a href="/ianalyse6/en/analysis/music-analysis-guide" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en">English</a></li></ul></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ianalyse6/en/"><span title="Home" class="linkLabel_WmDU">Home</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ianalyse6/en/analysis/audio-representations"><span title="Audio representations" class="linkLabel_WmDU">Audio representations</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ianalyse6/en/analysis/audio-descriptors"><span title="Audio descriptors" class="linkLabel_WmDU">Audio descriptors</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ianalyse6/en/analysis/audio-descriptors-form"><span title="Audio descriptors — formulas" class="linkLabel_WmDU">Audio descriptors — formulas</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/ianalyse6/en/analysis/music-analysis-guide"><span title="Musical analysis guide" class="linkLabel_WmDU">Musical analysis guide</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/ianalyse6/en/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Musical analysis guide</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Musical analysis guide</h1></header>
+<p>This guide connects representations, audio descriptors, score and video annotation, and analytical uses of iAnalyse. It is neither a treatise on musical acoustics nor a fixed analytical method. Its aim is to show how signal processing and multimodal annotation can support musicological work grounded in listening, observation, comparison and interpretation.</p>
+<p>Technical details of each calculation are presented in:</p>
+<ul>
+<li class=""><a class="" href="/ianalyse6/en/analysis/audio-descriptors">Audio descriptors</a>.</li>
+<li class=""><a class="" href="/ianalyse6/en/analysis/audio-representations">Spectral representations</a>.</li>
+</ul>
+<p>This guide instead starts from the analyst’s questions.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="assisted-analysis-as-a-tool">Assisted analysis as a tool<a href="#assisted-analysis-as-a-tool" class="hash-link" aria-label="Direct link to Assisted analysis as a tool" title="Direct link to Assisted analysis as a tool" translate="no">​</a></h2>
+<p>iAnalyse can be understood as an environment for augmented listening. Visualizations and measurements are not intended to generate a work’s musical meaning automatically. They transform the sound signal into observable objects to support six fundamental operations:</p>
+<ol>
+<li class=""><strong>Navigate</strong> files, particularly long recordings.</li>
+<li class=""><strong>Remember</strong> music with overview representations.</li>
+<li class=""><strong>Identify clues</strong> to investigate through listening and musical analysis.</li>
+<li class=""><strong>Extend the analysis</strong>: compare, experiment, make observations explicit, communicate, document and connect with musical practice.</li>
+<li class=""><strong>Annotate</strong> multimedia files, scores, videos and other materials.</li>
+<li class=""><strong>Build multimedia journeys</strong> through musical analysis.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="from-signal-to-interpretation-four-distinct-levels">From signal to interpretation: four distinct levels<a href="#from-signal-to-interpretation-four-distinct-levels" class="hash-link" aria-label="Direct link to From signal to interpretation: four distinct levels" title="Direct link to From signal to interpretation: four distinct levels" translate="no">​</a></h2>
+<p>A rigorous approach avoids moving directly from a numerical result to a musicological conclusion. Four levels should be distinguished.</p>
+<table><thead><tr><th>Level</th><th>Question</th><th>Example</th></tr></thead><tbody><tr><td>Computed data</td><td>What did the algorithm measure?</td><td>The spectral centroid increases</td></tr><tr><td>Observable clue</td><td>Which acoustic phenomenon could explain this change?</td><td>Energy shifts toward higher frequencies</td></tr><tr><td>Musical hypothesis</td><td>What function might this phenomenon serve?</td><td>Brightening timbre, increasing density or changing orchestration</td></tr><tr><td>Interpretation</td><td>How does this phenomenon act within the work?</td><td>Preparing a formal articulation or gradually transforming material</td></tr></tbody></table>
+<p>An increase in centroid does not by itself mean “tension”, “climax” or “expressive brightness”. These concepts result from a contextual interpretation, confirmed through listening and connected to other parameters.</p>
+<p>The recommended path is:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">mesure -&gt; observation -&gt; hypothèse -&gt; écoute ciblée -&gt; annotation -&gt; comparaison -&gt; interprétation</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="representations-and-descriptors-complementary-approaches">Representations and descriptors: complementary approaches<a href="#representations-and-descriptors-complementary-approaches" class="hash-link" aria-label="Direct link to Representations and descriptors: complementary approaches" title="Direct link to Representations and descriptors: complementary approaches" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="representations-provide-an-overview">Representations provide an overview<a href="#representations-provide-an-overview" class="hash-link" aria-label="Direct link to Representations provide an overview" title="Direct link to Representations provide an overview" translate="no">​</a></h3>
+<p>A spectrogram, chromagram or self-similarity matrix (SSM) preserves several dimensions at once. These views suit exploration, pattern recognition and memorization.</p>
+<p>They address questions such as:</p>
+<ul>
+<li class="">where are significant events?</li>
+<li class="">which regions resemble one another?</li>
+<li class="">how does register or texture evolve?</li>
+<li class="">which structures recur?</li>
+<li class="">are there continuous processes, breaks or symmetries?</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="descriptors-isolate-a-property">Descriptors isolate a property<a href="#descriptors-isolate-a-property" class="hash-link" aria-label="Direct link to Descriptors isolate a property" title="Direct link to Descriptors isolate a property" translate="no">​</a></h3>
+<p>A descriptor reduces each frame to one or a few values. It lets you follow a chosen dimension precisely, compare passages and look for thresholds or trends.</p>
+<p>It addresses questions such as:</p>
+<ul>
+<li class="">does energy actually increase?</li>
+<li class="">does the spectral distribution become higher or broader?</li>
+<li class="">does the texture become noisier?</li>
+<li class="">does the spectrum change rapidly?</li>
+<li class="">does the content become more lateral?</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="combining-them-is-more-productive-than-using-either-alone">Combining them is more productive than using either alone<a href="#combining-them-is-more-productive-than-using-either-alone" class="hash-link" aria-label="Direct link to Combining them is more productive than using either alone" title="Direct link to Combining them is more productive than using either alone" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Représentation synoptique -&gt; fait apparaître une forme ou une rupture</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Descripteur              -&gt; précise la dimension acoustique concernée</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Écoute                   -&gt; identifie le phénomène musical</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Annotation               -&gt; inscrit l&#x27;interprétation dans la temporalité de l&#x27;œuvre</span><br></span></code></pre></div></div>
+<p>For example, a break visible in a spectrogram can be checked against spectral flux, RMS and centroid. Listening then helps determine whether it is a new source, a change in playing technique, filtering, an edit or a broader formal articulation.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-1--navigate-long-audio-files">Function 1 — Navigate long audio files<a href="#function-1--navigate-long-audio-files" class="hash-link" aria-label="Direct link to Function 1 — Navigate long audio files" title="Direct link to Function 1 — Navigate long audio files" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-challenge">The challenge<a href="#the-challenge" class="hash-link" aria-label="Direct link to The challenge" title="Direct link to The challenge" translate="no">​</a></h3>
+<p>In a long recording, linear listening alone makes precise returns, comparisons between distant regions and rapid overviews difficult. Representations turn the file into a map of time.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="preferred-tools">Preferred tools<a href="#preferred-tools" class="hash-link" aria-label="Direct link to Preferred tools" title="Direct link to Preferred tools" translate="no">​</a></h3>
+<table><thead><tr><th>Navigation need</th><th>Representation or descriptor</th><th>Clue to look for</th></tr></thead><tbody><tr><td>Identify silence and large masses</td><td>Waveform, RMS, Loudness</td><td>Alternating activity/rest, overall level changes</td></tr><tr><td>Locate attacks</td><td>Waveform, Onset Strength, Attack Time</td><td>Impulsive events and sequence beginnings</td></tr><tr><td>Identify texture changes</td><td>Spectrogram, complexity, Spectral Flux</td><td>Breaks or transformations in frequency content</td></tr><tr><td>Follow register changes</td><td>Logarithmic spectrogram, Peak Frequency, Spectral Centroid</td><td>Overall movement toward low or high frequencies</td></tr><tr><td>Find harmonic regions</td><td>Chromagram</td><td>Pitch-class configurations</td></tr><tr><td>Identify returns</td><td>SSM, chromagram, MFCC</td><td>Diagonal patterns or similar blocks</td></tr><tr><td>Explore spatial evolution</td><td>Stereo balance, MID/SIDE</td><td>Movement or width changes</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="procedure">Procedure<a href="#procedure" class="hash-link" aria-label="Direct link to Procedure" title="Direct link to Procedure" translate="no">​</a></h3>
+<ol>
+<li class="">Start with a general view: waveform and spectrogram.</li>
+<li class="">Observe large-scale contrasts without immediately trying to name them.</li>
+<li class="">Place markers at breaks, thresholds, returns and distinctive regions.</li>
+<li class="">Add one or two descriptors corresponding to the main hypothesis.</li>
+<li class="">Listen around the markers, including a few seconds before and after.</li>
+<li class="">Turn relevant markers into segments or annotations.</li>
+<li class="">Return to an overview to check that the segmentation is coherent.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="precaution">Precaution<a href="#precaution" class="hash-link" aria-label="Direct link to Precaution" title="Direct link to Precaution" translate="no">​</a></h3>
+<p>An event’s visibility depends on the settings. An attack may be clear with a short window and disappear with a long one; a low resonance may behave oppositely. Effective navigation may therefore require several maps of the same file.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-2--support-musical-memory">Function 2 — Support musical memory<a href="#function-2--support-musical-memory" class="hash-link" aria-label="Direct link to Function 2 — Support musical memory" title="Direct link to Function 2 — Support musical memory" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="visualization-as-external-memory">Visualization as external memory<a href="#visualization-as-external-memory" class="hash-link" aria-label="Direct link to Visualization as external memory" title="Direct link to Visualization as external memory" translate="no">​</a></h3>
+<p>Listening unfolds over time: what has just been heard must be retained to compare it with what follows. An overview representation makes distant events visible simultaneously. It acts as an external memory of the work.</p>
+<p>This is particularly important for:</p>
+<ul>
+<li class="">long works;</li>
+<li class="">music without a score;</li>
+<li class="">experimental works;</li>
+<li class="">improvisation;</li>
+<li class="">soundscapes and field-recording collections;</li>
+<li class="">gradual processes that are difficult to segment;</li>
+<li class="">comparisons between versions.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-self-similarity-matrix-ssm-as-a-synopsis">The self-similarity matrix (SSM) as a synopsis<a href="#the-self-similarity-matrix-ssm-as-a-synopsis" class="hash-link" aria-label="Direct link to The self-similarity matrix (SSM) as a synopsis" title="Direct link to The self-similarity matrix (SSM) as a synopsis" translate="no">​</a></h3>
+<p>A self-similarity matrix, or SSM, compares each moment or segment of the file with every other one.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Audio -&gt; extraction de vecteurs par fenêtres</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      -&gt; comparaison de chaque vecteur avec tous les autres</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      -&gt; matrice temps × temps</span><br></span></code></pre></div></div>
+<p>The horizontal and vertical axes represent the same file. The main diagonal corresponds to each moment’s identity with itself.</p>
+<table><thead><tr><th>Shape observed in an SSM</th><th>Hypothesis to check</th></tr></thead><tbody><tr><td>Diagonal line parallel to the main diagonal</td><td>Repetition or return of a sequence</td></tr><tr><td>Homogeneous square along the diagonal</td><td>Relatively stable section</td></tr><tr><td>Checkerboard or repeated blocks</td><td>Periodic organization, alternation or recurring form</td></tr><tr><td>Sharp break between blocks</td><td>Possible section boundary</td></tr><tr><td>Interrupted or distorted diagonal</td><td>Varied, accelerated, slowed or transformed repetition</td></tr></tbody></table>
+<p>An SSM does not tell you what repeats. Similarity may arise from timbre, energy, harmony or texture, depending on the data used in the comparison.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="choose-what-the-visual-memory-should-retain">Choose what the visual memory should retain<a href="#choose-what-the-visual-memory-should-retain" class="hash-link" aria-label="Direct link to Choose what the visual memory should retain" title="Direct link to Choose what the visual memory should retain" translate="no">​</a></h3>
+<table><thead><tr><th>What you want to remember</th><th>Useful view</th></tr></thead><tbody><tr><td>Energy profile and density</td><td>Waveform, RMS, Loudness</td></tr><tr><td>Registers and spectral morphologies</td><td>Linear or logarithmic spectrograms</td></tr><tr><td>Harmonic trajectory</td><td>Chromagram</td></tr><tr><td>Timbral families</td><td>MFCC and timbre-based SSM</td></tr><tr><td>Returns and overall transformations</td><td>SSM</td></tr><tr><td>Spatial organization</td><td>Stereo and MID/SIDE spectrograms</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="build-an-analytical-image-rather-than-merely-recognize-an-image">Build an analytical image, rather than merely recognize an image<a href="#build-an-analytical-image-rather-than-merely-recognize-an-image" class="hash-link" aria-label="Direct link to Build an analytical image, rather than merely recognize an image" title="Direct link to Build an analytical image, rather than merely recognize an image" translate="no">​</a></h3>
+<p>Memorization becomes analytical when connected to annotations:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">forme visuelle -&gt; écoute du passage -&gt; qualification -&gt; annotation -&gt; relation avec d&#x27;autres passages</span><br></span></code></pre></div></div>
+<p>A color or pattern should not substitute for sound. It serves as a reference for recalling a quality heard, function or hypothesis.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-3--identify-clues-to-investigate-through-listening">Function 3 — Identify clues to investigate through listening<a href="#function-3--identify-clues-to-investigate-through-listening" class="hash-link" aria-label="Direct link to Function 3 — Identify clues to investigate through listening" title="Direct link to Function 3 — Identify clues to investigate through listening" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-a-clue">What is a clue?<a href="#what-is-a-clue" class="hash-link" aria-label="Direct link to What is a clue?" title="Direct link to What is a clue?" translate="no">​</a></h3>
+<p>A clue is an observable fact that may guide analysis without yet constituting proof or a sufficient interpretation.</p>
+<p>Examples:</p>
+<ul>
+<li class="">simultaneous increases in RMS and centroid;</li>
+<li class="">a secondary diagonal in an SSM;</li>
+<li class="">a stable horizontal band in a spectrogram;</li>
+<li class="">a sudden MFCC change;</li>
+<li class="">increased SIDE content;</li>
+<li class="">a persistent pitch class in a chromagram.</li>
+</ul>
+<p>A clue becomes musically relevant when it is:</p>
+<ul>
+<li class="">precisely located;</li>
+<li class="">described without overinterpretation;</li>
+<li class="">checked by listening;</li>
+<li class="">compared with its context;</li>
+<li class="">connected to other clues;</li>
+<li class="">integrated into a hypothesis about the work.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="triangulation">Triangulation<a href="#triangulation" class="hash-link" aria-label="Direct link to Triangulation" title="Direct link to Triangulation" translate="no">​</a></h3>
+<p>A useful practice combines three sources of knowledge:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">VISUALISATION : où et sous quelle forme le phénomène apparaît-il ?</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">MESURE        : quelle dimension varie et dans quelle direction ?</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ÉCOUTE        : qu&#x27;entend-on, dans quel contexte et avec quelle fonction ?</span><br></span></code></pre></div></div>
+<p>When they converge, the hypothesis becomes stronger. When they diverge, the divergence is itself informative: it may reveal unsuitable settings, a perceptual limitation or a separation between acoustic dimensions.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="further-functions-of-assisted-analysis">Further functions of assisted analysis<a href="#further-functions-of-assisted-analysis" class="hash-link" aria-label="Direct link to Further functions of assisted analysis" title="Direct link to Further functions of assisted analysis" translate="no">​</a></h2>
+<p>The three main functions—navigation, memory and identifying clues—extend into several important uses in digital musicology.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-4--compare">Function 4 — Compare<a href="#function-4--compare" class="hash-link" aria-label="Direct link to Function 4 — Compare" title="Direct link to Function 4 — Compare" translate="no">​</a></h3>
+<p>Aligning representations and using common measurements facilitates comparisons between:</p>
+<ul>
+<li class="">distant moments in a work;</li>
+<li class="">different occurrences of material;</li>
+<li class="">performances;</li>
+<li class="">versions, edits or restorations;</li>
+<li class="">works in the same corpus;</li>
+<li class="">different musical or sonic practices.</li>
+</ul>
+<p>The computer helps make comparison criteria explicit. A resemblance may concern energy, timbre, register, harmony, morphology or space without being an overall similarity.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Ressemblance perçue</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; choix d&#x27;une dimension à comparer</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; représentation ou descripteur commun</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; contrôle des paramètres et des sources</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; écoute comparative</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; qualification des invariants et des différences</span><br></span></code></pre></div></div>
+<p>This moves beyond “these passages resemble each other” to ask precisely how, at what scale, and despite which differences.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-5--experiment-and-discover">Function 5 — Experiment and discover<a href="#function-5--experiment-and-discover" class="hash-link" aria-label="Direct link to Function 5 — Experiment and discover" title="Direct link to Function 5 — Experiment and discover" translate="no">​</a></h3>
+<p>Visualizations can serve a heuristic function: they sometimes reveal a phenomenon that was not being sought.</p>
+<p>Examples:</p>
+<ul>
+<li class="">spectral regularity unnoticed during initial listening;</li>
+<li class="">a transformed return suggested by an SSM diagonal;</li>
+<li class="">spatial organization connected to form;</li>
+<li class="">a separation between dynamics and brightness;</li>
+<li class="">timbral continuity across supposedly distinct sections.</li>
+</ul>
+<p>Exploration is productive when graphical discovery is distinguished from musical relevance. An unexpected shape becomes a research lead, not a conclusion.</p>
+<p>A heuristic approach may alternate between:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">question initiale</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; exploration visuelle</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; anomalie ou motif inattendu</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; nouvelle question</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; écoute ciblée</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; choix d&#x27;une mesure plus spécifique</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; reformulation de l&#x27;hypothèse</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-6--make-observations-explicit-and-reproducible">Function 6 — Make observations explicit and reproducible<a href="#function-6--make-observations-explicit-and-reproducible" class="hash-link" aria-label="Direct link to Function 6 — Make observations explicit and reproducible" title="Direct link to Function 6 — Make observations explicit and reproducible" translate="no">​</a></h3>
+<p>Making observations explicit does not mean eliminating subjectivity. It means stating the operations that lead to an observation:</p>
+<ul>
+<li class="">audio source used;</li>
+<li class="">passage boundaries;</li>
+<li class="">channel or channel mix;</li>
+<li class="">window and hop settings;</li>
+<li class="">chosen representation and descriptors;</li>
+<li class="">thresholds, bounds and normalizations;</li>
+<li class="">segmentation or comparison criteria.</li>
+</ul>
+<p>This information allows another person to reproduce the calculation, discuss the choices and obtain a comparable visualization. It distinguishes computed results, perceptual description and interpretation.</p>
+<p>Reproducibility strengthens an argument without making the interpretation unique. Two analysts may share observations and propose different musical readings.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-7--communicate-and-teach">Function 7 — Communicate and teach<a href="#function-7--communicate-and-teach" class="hash-link" aria-label="Direct link to Function 7 — Communicate and teach" title="Direct link to Function 7 — Communicate and teach" translate="no">​</a></h3>
+<p>Overview images, curves and annotations can mediate between the work and different audiences:</p>
+<ul>
+<li class="">guide classroom listening;</li>
+<li class="">explain an acoustic phenomenon;</li>
+<li class="">present the form of a work without a score;</li>
+<li class="">connect perceptual vocabulary with signal data;</li>
+<li class="">communicate an analytical journey;</li>
+<li class="">document a performance or practice-based research.</li>
+</ul>
+<p>A teaching visualization should be more selective than an exploratory interface. It benefits from few parameters, a clear legend and synchronization with audible examples.</p>
+<p>The recommended teaching sequence is:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">écouter sans image</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; verbaliser les perceptions</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; observer une représentation ciblée</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; relier forme visible et phénomène acoustique</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; réécouter</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; discuter ce que l&#x27;image explique et ce qu&#x27;elle ne montre pas</span><br></span></code></pre></div></div>
+<p>This alternation avoids letting the image supply the answer in advance or impose a single way of hearing.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-8--document-and-argue">Function 8 — Document and argue<a href="#function-8--document-and-argue" class="hash-link" aria-label="Direct link to Function 8 — Document and argue" title="Direct link to Function 8 — Document and argue" translate="no">​</a></h3>
+<p>iAnalyse preserves stages of reasoning within one temporal workspace:</p>
+<ul>
+<li class="">navigation markers;</li>
+<li class="">proposed segmentation;</li>
+<li class="">descriptive and interpretive annotations;</li>
+<li class="">relationships between events;</li>
+<li class="">representations that prompted the hypothesis;</li>
+<li class="">curves used as evidence;</li>
+<li class="">reservations and competing hypotheses.</li>
+</ul>
+<p>This turns analysis into an inspectable, revisable record. It supports scholarly writing, presentation preparation, collaborative work and analytical editions.</p>
+<p>A strong argument does more than insert a spectrogram screenshot. It explains what to observe, why the settings are appropriate, how the phenomenon is perceived and how it supports the interpretation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-9--connect-analysis-and-musical-practice">Function 9 — Connect analysis and musical practice<a href="#function-9--connect-analysis-and-musical-practice" class="hash-link" aria-label="Direct link to Function 9 — Connect analysis and musical practice" title="Direct link to Function 9 — Connect analysis and musical practice" translate="no">​</a></h3>
+<p>The same tools can support composition, performance and sound production:</p>
+<ul>
+<li class="">compare takes;</li>
+<li class="">observe the spectral balance of instrumental playing;</li>
+<li class="">study a gesture’s evolution;</li>
+<li class="">prepare a performance from articulation points;</li>
+<li class="">analyze spatialization or a mix;</li>
+<li class="">retrieve and transform material during creative work.</li>
+</ul>
+<p>Here, computed results can provide feedback: they not only describe a finished work but inform artistic decisions. Measurement remains one perspective among others and does not define an aesthetic standard.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="multimodal-analysis">Multimodal analysis<a href="#multimodal-analysis" class="hash-link" aria-label="Direct link to Multimodal analysis" title="Direct link to Multimodal analysis" translate="no">​</a></h2>
+<p>iAnalyse goes beyond examining the audio signal. <strong>Slideshow</strong> and <strong>Video</strong> Documents let you place annotations directly on a score, image or film shot while connecting them with the media’s temporal progression.</p>
+<p>This changes the status of annotation:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">annotation temporelle</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    = à quel moment le phénomène se produit-il ?</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">annotation spatiale</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    = où se trouve-t-il dans la partition ou dans l&#x27;image ?</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">annotation audiovisuelle</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    = comment sa position, sa durée et son contenu visuel</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      se rapportent-ils à ce qui est entendu ?</span><br></span></code></pre></div></div>
+<p>Multimodal analysis can connect several spaces:</p>
+<ul>
+<li class="">recording time;</li>
+<li class="">the score’s graphical space;</li>
+<li class="">the video frame;</li>
+<li class="">editing time;</li>
+<li class="">computed sound representations;</li>
+<li class="">the conceptual space built by analytical categories and relationships.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-10--annotate-a-score-in-a-slideshow-document">Function 10 — Annotate a score in a Slideshow Document<a href="#function-10--annotate-a-score-in-a-slideshow-document" class="hash-link" aria-label="Direct link to Function 10 — Annotate a score in a Slideshow Document" title="Direct link to Function 10 — Annotate a score in a Slideshow Document" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="principle">Principle<a href="#principle" class="hash-link" aria-label="Direct link to Principle" title="Direct link to Principle" translate="no">​</a></h3>
+<p>A Slideshow Document connects a sequence of slides with media time. Each slide may contain a score image and its own annotations. Playback position determines the displayed page and the objects’ temporal visibility.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Audio ou vidéo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; positions temporelles des changements de page</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; diapositives contenant les images de partition</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; annotations spatiales sur chaque page</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; durée d&#x27;apparition des annotations</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; lecture synchronisée partition / média / commentaire analytique</span><br></span></code></pre></div></div>
+<p>Image zoom and alignment adapt the score to the presentation frame. Annotations remain organized by slide and also appear in the Document’s timeline.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-score-annotation-enables">What score annotation enables<a href="#what-score-annotation-enables" class="hash-link" aria-label="Direct link to What score annotation enables" title="Direct link to What score annotation enables" translate="no">​</a></h3>
+<table><thead><tr><th>Operation</th><th>Analytical example</th></tr></thead><tbody><tr><td>Locate</td><td>Frame a cell, note, chord, motif or indication</td></tr><tr><td>Connect</td><td>Show correspondences between voices, motifs, registers or pages</td></tr><tr><td>Establish hierarchy</td><td>Distinguish main structure, detail and secondary commentary</td></tr><tr><td>Place in time</td><td>Reveal an annotation when the passage is heard</td></tr><tr><td>Compare</td><td>Use consistent colors or categories across occurrences</td></tr><tr><td>Comment</td><td>Associate text, a symbol or an explanation with a precise region</td></tr><tr><td>Guide</td><td>Build a reading path that follows the performance</td></tr></tbody></table>
+<p>Graphical shapes, lines, text and composite annotations can distinguish levels of discourse: description, segmentation, motivic relationships, harmonic function, orchestration or interpretive hypotheses.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="spatial-and-temporal-annotation">Spatial and temporal annotation<a href="#spatial-and-temporal-annotation" class="hash-link" aria-label="Direct link to Spatial and temporal annotation" title="Direct link to Spatial and temporal annotation" translate="no">​</a></h3>
+<p>A score annotation has two complementary anchors:</p>
+<ul>
+<li class="">a graphical position on the page;</li>
+<li class="">a time interval in the recording.</li>
+</ul>
+<p>This dual placement distinguishes:</p>
+<ul>
+<li class="">the written object, which may occupy a stable region of the score;</li>
+<li class="">its sonic realization, which has a duration and a place within the performance;</li>
+<li class="">the analytical commentary, which may appear before, during or after the event.</li>
+</ul>
+<p>For a repeat, cadenza, rubato or tempo change, the relationship between notated space and recorded time is nonlinear. Slide changes and annotation durations can document this difference.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="uses-in-musical-analysis">Uses in musical analysis<a href="#uses-in-musical-analysis" class="hash-link" aria-label="Direct link to Uses in musical analysis" title="Direct link to Uses in musical analysis" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="motivic-and-thematic-analysis">Motivic and thematic analysis<a href="#motivic-and-thematic-analysis" class="hash-link" aria-label="Direct link to Motivic and thematic analysis" title="Direct link to Motivic and thematic analysis" translate="no">​</a></h4>
+<ul>
+<li class="">outline occurrences of a motif;</li>
+<li class="">use a consistent color for its identity;</li>
+<li class="">add a second graphical property for its transformation;</li>
+<li class="">connect antecedents and consequents;</li>
+<li class="">compare augmentation, diminution, inversion, fragmentation or transposition.</li>
+</ul>
+<p>Color then represents an analytical category, not a computed acoustic property. Its legend should be explicit.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="harmonic-and-contrapuntal-analysis">Harmonic and contrapuntal analysis<a href="#harmonic-and-contrapuntal-analysis" class="hash-link" aria-label="Direct link to Harmonic and contrapuntal analysis" title="Direct link to Harmonic and contrapuntal analysis" translate="no">​</a></h4>
+<ul>
+<li class="">annotate chords, functions, voice leading or prolongations;</li>
+<li class="">show common tones and chromatic movement;</li>
+<li class="">distinguish local and global harmonic levels;</li>
+<li class="">follow a pedal point or structural line across pages;</li>
+<li class="">reveal analyses during listening.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="orchestration-analysis">Orchestration analysis<a href="#orchestration-analysis" class="hash-link" aria-label="Direct link to Orchestration analysis" title="Direct link to Orchestration analysis" translate="no">​</a></h4>
+<ul>
+<li class="">color instrumental families or orchestral functions;</li>
+<li class="">identify doubling, handovers, timbral fusion and contrast;</li>
+<li class="">connect notation with the spectrogram and descriptors;</li>
+<li class="">compare notated density, sonic density and recorded balance.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-analysis">Performance analysis<a href="#performance-analysis" class="hash-link" aria-label="Direct link to Performance analysis" title="Direct link to Performance analysis" translate="no">​</a></h4>
+<ul>
+<li class="">align the score with a specific recording;</li>
+<li class="">annotate breathing, rubato, accentuation, phrasing and articulation;</li>
+<li class="">compare notated and performed duration;</li>
+<li class="">identify choices of balance, dynamics or timbre;</li>
+<li class="">prepare comparisons between performances.</li>
+</ul>
+<p>A crescendo marking in the score, an increase in RMS and perceived intensification are three different objects. Comparing them is precisely what makes it possible to study their realization in performance.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="contemporary-music-and-unconventional-notation">Contemporary music and unconventional notation<a href="#contemporary-music-and-unconventional-notation" class="hash-link" aria-label="Direct link to Contemporary music and unconventional notation" title="Direct link to Contemporary music and unconventional notation" translate="no">​</a></h4>
+<ul>
+<li class="">comment on symbols, playing techniques and setups;</li>
+<li class="">explain open or mobile sections;</li>
+<li class="">follow the relationship between prescriptive notation and sonic result;</li>
+<li class="">annotate graphic scores;</li>
+<li class="">document performers’ decisions.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="communication-teaching-and-outreach">Communication, teaching and outreach<a href="#communication-teaching-and-outreach" class="hash-link" aria-label="Direct link to Communication, teaching and outreach" title="Direct link to Communication, teaching and outreach" translate="no">​</a></h3>
+<p>The Slideshow can become an augmented listening score:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">page de partition</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    + surlignage synchronisé</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    + commentaire progressif</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    + écoute</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    + possibilité de revenir au contexte</span><br></span></code></pre></div></div>
+<p>Uses include:</p>
+<ul>
+<li class="">analysis classes with progressively revealed levels;</li>
+<li class="">presenting a motif as it enters;</li>
+<li class="">synchronized orchestration commentary;</li>
+<li class="">introductions to score reading;</li>
+<li class="">lectures or concerts with commentary;</li>
+<li class="">performer preparation;</li>
+<li class="">introducing a contemporary work;</li>
+<li class="">publishing an accessible analytical journey.</li>
+</ul>
+<p>Effective outreach avoids showing every annotation at once. It organizes a progression: identification, listening, explanation, comparison and synthesis.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="methodological-risks">Methodological risks<a href="#methodological-risks" class="hash-link" aria-label="Direct link to Methodological risks" title="Direct link to Methodological risks" translate="no">​</a></h3>
+<ul>
+<li class="">The page may suggest that the score is the entire work, relegating performance to the background.</li>
+<li class="">Highlighting directs attention toward the analyst’s prior choices.</li>
+<li class="">A page change is not necessarily a musical articulation.</li>
+<li class="">Synchronization with one recording does not apply to every performance.</li>
+<li class="">An annotation placed on a note may concern a phenomenon extending beyond its notation.</li>
+</ul>
+<p>It is therefore useful to distinguish visually between information from the score, listening, computation and interpretation.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-11--annotate-a-video-in-a-video-document">Function 11 — Annotate a video in a Video Document<a href="#function-11--annotate-a-video-in-a-video-document" class="hash-link" aria-label="Direct link to Function 11 — Annotate a video in a Video Document" title="Direct link to Function 11 — Annotate a video in a Video Document" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="principle-1">Principle<a href="#principle-1" class="hash-link" aria-label="Direct link to Principle" title="Direct link to Principle" translate="no">​</a></h3>
+<p>A Video Document overlays graphical annotations whose visibility depends on time. They can identify a region of the frame, comment on an event, follow an object compatible with video tracking, and connect with computed representations.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Vidéo avec son</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; image courante</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; annotations spatiales superposées</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; intervalles temporels de visibilité</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; suivi éventuel d&#x27;un objet dans le cadre</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; représentations et données synchronisées</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; lecture analytique audiovisuelle</span><br></span></code></pre></div></div>
+<p>The timeline retains annotation intervals. The analyst can therefore work simultaneously with the current image and the overall temporal organization.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-video-annotation-enables">What video annotation enables<a href="#what-video-annotation-enables" class="hash-link" aria-label="Direct link to What video annotation enables" title="Direct link to What video annotation enables" translate="no">​</a></h3>
+<table><thead><tr><th>Operation</th><th>Example</th></tr></thead><tbody><tr><td>Identify within the frame</td><td>Instrument, performer, gesture, object, region or visual detail</td></tr><tr><td>Delimit in time</td><td>Shot, movement, entry, action or synchronization</td></tr><tr><td>Track</td><td>Keep an annotation on a moving object when tracking applies</td></tr><tr><td>Connect</td><td>Associate gesture, sound event and musical change</td></tr><tr><td>Overlay</td><td>Compare video, annotation and computed representation</td></tr><tr><td>Categorize</td><td>Identify shot types, gestures, sources or functions</td></tr><tr><td>Export or present</td><td>Produce a commented audiovisual reading</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="analyze-music-for-moving-images">Analyze music for moving images<a href="#analyze-music-for-moving-images" class="hash-link" aria-label="Direct link to Analyze music for moving images" title="Direct link to Analyze music for moving images" translate="no">​</a></h3>
+<p>Analyzing music for moving images involves more than listing synchronizations. It examines relationships between two temporal and expressive organizations.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="synchronization">Synchronization<a href="#synchronization" class="hash-link" aria-label="Direct link to Synchronization" title="Direct link to Synchronization" translate="no">​</a></h4>
+<ul>
+<li class="">coincidence between a sound attack and a cut;</li>
+<li class="">musical accent on a movement;</li>
+<li class="">harmonic change at a shot transition;</li>
+<li class="">appearance or disappearance of a sound with a visible source;</li>
+<li class="">exact, anticipated, delayed or gradually established synchronization.</li>
+</ul>
+<p>A synchronization point becomes analytically interesting when its preparation, recurrence and function are also examined.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="editing-and-form">Editing and form<a href="#editing-and-form" class="hash-link" aria-label="Direct link to Editing and form" title="Direct link to Editing and form" translate="no">​</a></h4>
+<table><thead><tr><th>Visual dimension</th><th>Musical dimensions to compare</th></tr></thead><tbody><tr><td>Shot duration</td><td>Phrases, pulse, event density</td></tr><tr><td>Cut</td><td>Attack, silence, cadence, spectral break</td></tr><tr><td>Fade</td><td>Transition, timbral continuity, resonance</td></tr><tr><td>Alternating shots</td><td>Ostinato, periodicity, dialogue, antiphony</td></tr><tr><td>Long take</td><td>Continuous process, sustained sound, accumulation</td></tr><tr><td>Change of shot scale</td><td>Register, density, dynamics, orchestration</td></tr></tbody></table>
+<p>The aim is not to reduce the relationship to one-to-one correspondences, but to observe agreement, displacement, tension and independence between editing and music.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="point-of-view-space-and-listening">Point of view, space and listening<a href="#point-of-view-space-and-listening" class="hash-link" aria-label="Direct link to Point of view, space and listening" title="Direct link to Point of view, space and listening" translate="no">​</a></h4>
+<ul>
+<li class="">relationship between a source’s position in the frame and its stereo position;</li>
+<li class="">off-screen or acousmatic sounds, or sounds with ambiguous sources;</li>
+<li class="">changes in listening perspective;</li>
+<li class="">sonic continuity across visual discontinuity;</li>
+<li class="">diegetic space, off-screen space or musical commentary;</li>
+<li class="">depth suggested by reverberation, level or filtering.</li>
+</ul>
+<p>The stereo balance spectrogram and MID/SIDE ratio can complement frame annotation, but do not alone determine a sound’s narrative or spatial status.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="dramaturgical-and-narrative-functions">Dramaturgical and narrative functions<a href="#dramaturgical-and-narrative-functions" class="hash-link" aria-label="Direct link to Dramaturgical and narrative functions" title="Direct link to Dramaturgical and narrative functions" translate="no">​</a></h4>
+<ul>
+<li class="">continuity or rupture between sequences;</li>
+<li class="">anticipation of a visual event;</li>
+<li class="">recall or memory association;</li>
+<li class="">characterization of a place, character or state;</li>
+<li class="">change of narrative level;</li>
+<li class="">irony, contradiction or distance between music and image.</li>
+</ul>
+<p>These functions cannot be computed directly. Measurements help describe the material that realizes them, while audiovisual annotation supports arguments about their contextual role.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="analyze-gesture-and-performance">Analyze gesture and performance<a href="#analyze-gesture-and-performance" class="hash-link" aria-label="Direct link to Analyze gesture and performance" title="Direct link to Analyze gesture and performance" translate="no">​</a></h3>
+<p>Video annotation also opens up the study of music as bodily activity.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="instrumental-gesture">Instrumental gesture<a href="#instrumental-gesture" class="hash-link" aria-label="Direct link to Instrumental gesture" title="Direct link to Instrumental gesture" translate="no">​</a></h4>
+<ul>
+<li class="">preparation, attack, sustain and release;</li>
+<li class="">coordination between hands;</li>
+<li class="">sound-producing and expressive gestures;</li>
+<li class="">relationship between movement amplitude and acoustic result;</li>
+<li class="">bodily anticipation of a sound event;</li>
+<li class="">playing techniques and technical changes.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="interaction">Interaction<a href="#interaction" class="hash-link" aria-label="Direct link to Interaction" title="Direct link to Interaction" translate="no">​</a></h4>
+<ul>
+<li class="">looks and signals between musicians;</li>
+<li class="">conductor–ensemble coordination;</li>
+<li class="">imitation and response;</li>
+<li class="">turn-taking in improvisation;</li>
+<li class="">temporary leadership;</li>
+<li class="">relationships between collective movement and musical density.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="stage-and-setup">Stage and setup<a href="#stage-and-setup" class="hash-link" aria-label="Direct link to Stage and setup" title="Direct link to Stage and setup" translate="no">​</a></h4>
+<ul>
+<li class="">performers’ movement;</li>
+<li class="">use of interfaces and electronics;</li>
+<li class="">relationship with the audience;</li>
+<li class="">visible spatial arrangement and heard spatialization;</li>
+<li class="">staging, lighting and sound production.</li>
+</ul>
+<p>Object tracking can keep a graphical reference on a moving element. It does not replace gesture analysis: a geometric trajectory alone does not define musical function.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="analyze-dance-and-movement">Analyze dance and movement<a href="#analyze-dance-and-movement" class="hash-link" aria-label="Direct link to Analyze dance and movement" title="Direct link to Analyze dance and movement" translate="no">​</a></h3>
+<p>A video can connect:</p>
+<ul>
+<li class="">bodily weight shifts and accents;</li>
+<li class="">choreographic and musical phrases;</li>
+<li class="">synchronization, counterpoint or independence;</li>
+<li class="">movement density and sonic density;</li>
+<li class="">spatial occupation and spatialization;</li>
+<li class="">repeated gestures and musical recurrences.</li>
+</ul>
+<p>Annotations can follow bodily regions or events, while markers and segments organize the temporal units being compared.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="analyze-recorded-practices">Analyze recorded practices<a href="#analyze-recorded-practices" class="hash-link" aria-label="Direct link to Analyze recorded practices" title="Direct link to Analyze recorded practices" translate="no">​</a></h3>
+<p>Beyond film and concert, video annotation is relevant to:</p>
+<ul>
+<li class="">audiovisual ethnomusicology;</li>
+<li class="">rehearsal observation;</li>
+<li class="">analysis of lessons and oral transmission;</li>
+<li class="">instrument making and technical gestures;</li>
+<li class="">sound installations;</li>
+<li class="">interactive setups;</li>
+<li class="">studio creation;</li>
+<li class="">practice-based research documentation.</li>
+</ul>
+<p>In these contexts, account for recording conditions, camera angle, what remains off-screen, and the effect of the recording equipment’s presence.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="methodological-risks-1">Methodological risks<a href="#methodological-risks-1" class="hash-link" aria-label="Direct link to Methodological risks" title="Direct link to Methodological risks" translate="no">​</a></h3>
+<ul>
+<li class="">Temporal coincidence does not prove causation.</li>
+<li class="">What is visible is not necessarily the source of what is heard.</li>
+<li class="">Editing may reconstruct the performance.</li>
+<li class="">Framing excludes part of the situation.</li>
+<li class="">Automatic tracking may lose the object or drift.</li>
+<li class="">An annotation fixed to the frame and one attached to an object do not have the same meaning.</li>
+<li class="">Gesture or narrative-function categories must be defined before quantitative comparison.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-12--build-multimedia-analytical-journeys">Function 12 — Build multimedia analytical journeys<a href="#function-12--build-multimedia-analytical-journeys" class="hash-link" aria-label="Direct link to Function 12 — Build multimedia analytical journeys" title="Direct link to Function 12 — Build multimedia analytical journeys" translate="no">​</a></h2>
+<p>Slideshow and Video Documents can move beyond individual note-taking to become forms of publication or presentation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="guided-listening-journeys">Guided listening journeys<a href="#guided-listening-journeys" class="hash-link" aria-label="Direct link to Guided listening journeys" title="Direct link to Guided listening journeys" translate="no">​</a></h3>
+<p>A journey may organize:</p>
+<ol>
+<li class="">an initial listening without commentary;</li>
+<li class="">an overview of form;</li>
+<li class="">several stages focused on specific phenomena;</li>
+<li class="">comparative returns;</li>
+<li class="">a final integrative listening.</li>
+</ol>
+<p>Time-based annotations control what appears at each stage. The journey can respect the time needed for discovery rather than immediately presenting a finished analysis.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="synchronized-analytical-edition">Synchronized analytical edition<a href="#synchronized-analytical-edition" class="hash-link" aria-label="Direct link to Synchronized analytical edition" title="Direct link to Synchronized analytical edition" translate="no">​</a></h3>
+<p>An edition may combine:</p>
+<ul>
+<li class="">facsimile or score;</li>
+<li class="">recording;</li>
+<li class="">graphical annotations;</li>
+<li class="">textual comments;</li>
+<li class="">segmentation;</li>
+<li class="">acoustic representations;</li>
+<li class="">links between occurrences;</li>
+<li class="">performance variants.</li>
+</ul>
+<p>It preserves the distinction between source, observation and commentary while enabling coordinated consultation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="teaching-and-self-study-materials">Teaching and self-study materials<a href="#teaching-and-self-study-materials" class="hash-link" aria-label="Direct link to Teaching and self-study materials" title="Direct link to Teaching and self-study materials" translate="no">​</a></h3>
+<p>One Document may offer several layers:</p>
+<ul>
+<li class="">basic orientation for a first approach;</li>
+<li class="">vocabulary and definitions;</li>
+<li class="">detailed analysis;</li>
+<li class="">questions to solve by listening;</li>
+<li class="">delayed display of answers;</li>
+<li class="">comparisons between students’ proposals.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scholarly-communication-and-public-outreach">Scholarly communication and public outreach<a href="#scholarly-communication-and-public-outreach" class="hash-link" aria-label="Direct link to Scholarly communication and public outreach" title="Direct link to Scholarly communication and public outreach" translate="no">​</a></h3>
+<p>In a presentation, synchronized annotations show exactly the passage under discussion. For public outreach, they can make a structure perceptible without requiring prior score reading.</p>
+<p>In both cases, the visualization should remain readable and its origin explicit: computed data, transcription, analyst’s annotation or source information.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective--analyze-relationships-between-score-and-sonic-realization">Objective — Analyze relationships between score and sonic realization<a href="#objective--analyze-relationships-between-score-and-sonic-realization" class="hash-link" aria-label="Direct link to Objective — Analyze relationships between score and sonic realization" title="Direct link to Objective — Analyze relationships between score and sonic realization" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="questions">Questions<a href="#questions" class="hash-link" aria-label="Direct link to Questions" title="Direct link to Questions" translate="no">​</a></h3>
+<ul>
+<li class="">How does notated time become performed time?</li>
+<li class="">Which written elements are emphasized, attenuated or transformed?</li>
+<li class="">How do notated orchestration and spectral result correspond?</li>
+<li class="">Where do deviations, freedoms and performance decisions appear?</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-combination">Recommended combination<a href="#recommended-combination" class="hash-link" aria-label="Direct link to Recommended combination" title="Direct link to Recommended combination" translate="no">​</a></h3>
+<table><thead><tr><th>Level</th><th>Tools</th></tr></thead><tbody><tr><td>Written source</td><td>Slideshow with score images</td></tr><tr><td>Location</td><td>Graphical annotations on notated objects</td></tr><tr><td>Temporal realization</td><td>Slide synchronization and annotation intervals</td></tr><tr><td>Acoustic result</td><td>Spectrogram, waveform and descriptors</td></tr><tr><td>Interpretation</td><td>Comments and relationships between passages</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pipeline">Pipeline<a href="#pipeline" class="hash-link" aria-label="Direct link to Pipeline" title="Direct link to Pipeline" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">objet noté</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; annotation sur la partition</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; localisation dans l&#x27;enregistrement</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; observation acoustique</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; écoute comparative</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; description de la réalisation</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; hypothèse interprétative</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective--analyze-music-for-moving-images">Objective — Analyze music for moving images<a href="#objective--analyze-music-for-moving-images" class="hash-link" aria-label="Direct link to Objective — Analyze music for moving images" title="Direct link to Objective — Analyze music for moving images" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="questions-1">Questions<a href="#questions-1" class="hash-link" aria-label="Direct link to Questions" title="Direct link to Questions" translate="no">​</a></h3>
+<ul>
+<li class="">Where do music and image synchronize or diverge?</li>
+<li class="">How does visual editing interact with musical form?</li>
+<li class="">What status do music and sounds hold in the narrative?</li>
+<li class="">How do visible, off-screen and sonic spaces evolve?</li>
+<li class="">Does music anticipate, extend or contradict the image?</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-combination-1">Recommended combination<a href="#recommended-combination-1" class="hash-link" aria-label="Direct link to Recommended combination" title="Direct link to Recommended combination" translate="no">​</a></h3>
+<table><thead><tr><th>Dimension</th><th>Tools</th></tr></thead><tbody><tr><td>Events within the frame</td><td>Spatial and temporal video annotations</td></tr><tr><td>Editing</td><td>Markers and segments for shots or sequences</td></tr><tr><td>Sound events</td><td>Spectrogram, waveform, Onset Strength</td></tr><tr><td>Continuity and rupture</td><td>Spectral Flux, complexity, SSM</td></tr><tr><td>Space</td><td>Stereo balance, MID/SIDE and annotations of visible sources</td></tr><tr><td>Function</td><td>Text, categories and analytical relationships</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pipeline-1">Pipeline<a href="#pipeline-1" class="hash-link" aria-label="Direct link to Pipeline" title="Direct link to Pipeline" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">segmentation visuelle</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    + segmentation musicale</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; superposition temporelle</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; repérage des coïncidences et décalages</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; écoute et visionnage ciblés</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; qualification des relations</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; interprétation formelle, narrative ou dramaturgique</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective--study-gesture-performance-and-interaction">Objective — Study gesture, performance and interaction<a href="#objective--study-gesture-performance-and-interaction" class="hash-link" aria-label="Direct link to Objective — Study gesture, performance and interaction" title="Direct link to Objective — Study gesture, performance and interaction" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="questions-2">Questions<a href="#questions-2" class="hash-link" aria-label="Direct link to Questions" title="Direct link to Questions" translate="no">​</a></h3>
+<ul>
+<li class="">Which gesture prepares or produces the sound event?</li>
+<li class="">Which visual clues coordinate performers?</li>
+<li class="">How do body, instrument and space contribute to form?</li>
+<li class="">What does video show that audio alone cannot establish?</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-combination-2">Recommended combination<a href="#recommended-combination-2" class="hash-link" aria-label="Direct link to Recommended combination" title="Direct link to Recommended combination" translate="no">​</a></h3>
+<ul>
+<li class="">annotations or tracking on relevant bodily and instrumental regions;</li>
+<li class="">time intervals for gesture phases;</li>
+<li class="">waveform and Onset Strength for attacks;</li>
+<li class="">spectrogram for sonic results;</li>
+<li class="">segments for interaction units;</li>
+<li class="">explicit categories to make observations comparable.</li>
+</ul>
+<p>Do not confuse visible gesture with acoustic cause. A gesture may prepare, accompany, symbolize or follow a sound without directly producing it.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective--segment-and-study-form">Objective — Segment and study form<a href="#objective--segment-and-study-form" class="hash-link" aria-label="Direct link to Objective — Segment and study form" title="Direct link to Objective — Segment and study form" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="musicological-questions">Musicological questions<a href="#musicological-questions" class="hash-link" aria-label="Direct link to Musicological questions" title="Direct link to Musicological questions" translate="no">​</a></h3>
+<ul>
+<li class="">Where are the articulations?</li>
+<li class="">Are there stable sections, transitions or continuous processes?</li>
+<li class="">Are boundaries prepared, abrupt or ambiguous?</li>
+<li class="">Which parameters change together at each articulation?</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-combination-3">Recommended combination<a href="#recommended-combination-3" class="hash-link" aria-label="Direct link to Recommended combination" title="Direct link to Recommended combination" translate="no">​</a></h3>
+<table><thead><tr><th>Role</th><th>Tools</th></tr></thead><tbody><tr><td>Overview</td><td>Waveform, spectrogram, SSM</td></tr><tr><td>Change detection</td><td>Spectral Flux, Onset Strength, spectral complexity</td></tr><tr><td>Energy confirmation</td><td>RMS, Loudness</td></tr><tr><td>Timbral confirmation</td><td>Spectral Centroid, Flatness, MFCC</td></tr><tr><td>Formalization</td><td>Markers, segments, annotations and relationships</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="analytical-pipeline">Analytical pipeline<a href="#analytical-pipeline" class="hash-link" aria-label="Direct link to Analytical pipeline" title="Direct link to Analytical pipeline" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Vue globale</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; repérage de frontières candidates</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; calcul de flux, énergie et timbre</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; écoute avant / pendant / après chaque frontière</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; distinction rupture / transition / simple événement local</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; annotation de la fonction formelle</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; comparaison de toutes les frontières</span><br></span></code></pre></div></div>
+<p>A spectral-flux peak may signal an articulation or simply an isolated attack within a section. Formal function depends on temporal scale and what happens after the peak.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective--study-timbre-texture-and-playing-techniques">Objective — Study timbre, texture and playing techniques<a href="#objective--study-timbre-texture-and-playing-techniques" class="hash-link" aria-label="Direct link to Objective — Study timbre, texture and playing techniques" title="Direct link to Objective — Study timbre, texture and playing techniques" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="musicological-questions-1">Musicological questions<a href="#musicological-questions-1" class="hash-link" aria-label="Direct link to Musicological questions" title="Direct link to Musicological questions" translate="no">​</a></h3>
+<ul>
+<li class="">Is the material tonal, noisy, harmonic or inharmonic?</li>
+<li class="">How do brightness, density and spectral width evolve?</li>
+<li class="">Can families of sounds or playing techniques be distinguished?</li>
+<li class="">Is transformation continuous or based on substitutions?</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-combination-4">Recommended combination<a href="#recommended-combination-4" class="hash-link" aria-label="Direct link to Recommended combination" title="Direct link to Recommended combination" translate="no">​</a></h3>
+<table><thead><tr><th>Dimension</th><th>Representation</th><th>Complementary descriptors</th></tr></thead><tbody><tr><td>Brightness</td><td>Spectrogram</td><td>Spectral Centroid, Rolloff, Sharpness, Slope</td></tr><tr><td>Tonality/noise</td><td>Spectrogram, logarithmic resolution</td><td>Flatness, Noisiness, Harmonic Ratio, Inharmonicity</td></tr><tr><td>Width and dispersion</td><td>Spectrogram</td><td>Spectral Variance, Standard Deviation</td></tr><tr><td>Envelope regularity</td><td>MFCC</td><td>Spectral Smoothness, Contrast, Crest</td></tr><tr><td>Temporal transformation</td><td>Complexity, MFCC</td><td>Spectral Flux, Reflux, Entropy</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="method">Method<a href="#method" class="hash-link" aria-label="Direct link to Method" title="Direct link to Method" translate="no">​</a></h3>
+<ol>
+<li class="">First describe visible morphology: lines, clouds, bands, impacts, halos.</li>
+<li class="">Identify dimensions that seem to vary.</li>
+<li class="">Add only descriptors corresponding to those dimensions.</li>
+<li class="">Listen to several presumed occurrences of the same family.</li>
+<li class="">Annotate similarities and internal differences.</li>
+<li class="">Check whether the categories remain relevant in other contexts.</li>
+</ol>
+<p>MFCCs are useful for finding related timbres, but less explicit for naming them. The spectrogram and listening remain necessary to understand what produces the similarity.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective--study-pitch-register-and-harmony">Objective — Study pitch, register and harmony<a href="#objective--study-pitch-register-and-harmony" class="hash-link" aria-label="Direct link to Objective — Study pitch, register and harmony" title="Direct link to Objective — Study pitch, register and harmony" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="musicological-questions-2">Musicological questions<a href="#musicological-questions-2" class="hash-link" aria-label="Direct link to Musicological questions" title="Direct link to Musicological questions" translate="no">​</a></h3>
+<ul>
+<li class="">Which pitches or register regions structure the passage?</li>
+<li class="">Are there pedal points, pitch centers, aggregates or glissandi?</li>
+<li class="">How do chords and pitch classes succeed one another?</li>
+<li class="">Do harmonic timbre and perceived pitch converge?</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-combination-5">Recommended combination<a href="#recommended-combination-5" class="hash-link" aria-label="Direct link to Recommended combination" title="Direct link to Recommended combination" translate="no">​</a></h3>
+<table><thead><tr><th>Need</th><th>Tools</th></tr></thead><tbody><tr><td>Read partials and possible fundamentals</td><td>Logarithmic spectrogram or logarithmic resolution</td></tr><tr><td>Follow a dominant frequency</td><td>Peak Frequency</td></tr><tr><td>Follow an overall register shift</td><td>Spectral Centroid and Rolloff</td></tr><tr><td>Observe pitch classes</td><td>Chromagram</td></tr><tr><td>Assess the spectrum’s harmonic organization</td><td>Harmonic Ratio, Inharmonicity</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="precautions">Precautions<a href="#precautions" class="hash-link" aria-label="Direct link to Precautions" title="Direct link to Precautions" translate="no">​</a></h3>
+<ul>
+<li class="">The spectral peak is not necessarily the fundamental.</li>
+<li class="">Centroid describes an energy center, not a musical pitch.</li>
+<li class="">The chromagram merges octaves and aggregates harmonics.</li>
+<li class="">An inharmonic sound may produce visually strong pitch classes.</li>
+<li class="">The reference tuning must match the recording.</li>
+</ul>
+<p>The best approach often combines logarithmic spectrogram and chromagram: the former preserves register and partials, while the latter summarizes pitch classes.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective--study-dynamics-energy-and-density">Objective — Study dynamics, energy and density<a href="#objective--study-dynamics-energy-and-density" class="hash-link" aria-label="Direct link to Objective — Study dynamics, energy and density" title="Direct link to Objective — Study dynamics, energy and density" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="musicological-questions-3">Musicological questions<a href="#musicological-questions-3" class="hash-link" aria-label="Direct link to Musicological questions" title="Direct link to Musicological questions" translate="no">​</a></h3>
+<ul>
+<li class="">Where are accumulations, thinning, crescendos and decays?</li>
+<li class="">Do level changes coincide with timbral changes?</li>
+<li class="">Does a perceived climax arise from amplitude, register, density or their combination?</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-combination-6">Recommended combination<a href="#recommended-combination-6" class="hash-link" aria-label="Direct link to Recommended combination" title="Direct link to Recommended combination" translate="no">​</a></h3>
+<table><thead><tr><th>Phenomenon</th><th>Tools</th></tr></thead><tbody><tr><td>Average level</td><td>RMS Amplitude, Loudness</td></tr><tr><td>Attacks</td><td>Onset Strength, Attack Time</td></tr><tr><td>Spectral density</td><td>Spectrogram, Entropy, Flatness</td></tr><tr><td>High-frequency extension</td><td>Centroid, Rolloff, Sharpness</td></tr><tr><td>Spectral broadening</td><td>Variance, Standard Deviation</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-of-reasoning">Example of reasoning<a href="#example-of-reasoning" class="hash-link" aria-label="Direct link to Example of reasoning" title="Direct link to Example of reasoning" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Impression de crescendo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; RMS augmente-t-il ?</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; le spectre s&#x27;élargit-il ?</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; le centroïde monte-t-il ?</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; les attaques deviennent-elles plus nombreuses ?</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -&gt; l&#x27;écoute confirme-t-elle une intensification ou seulement un éclaircissement ?</span><br></span></code></pre></div></div>
+<p>Several acoustic trajectories can produce perceived intensification. Describing them separately avoids reducing musical dynamics to sound level alone.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective--study-rhythm-attacks-and-activity">Objective — Study rhythm, attacks and activity<a href="#objective--study-rhythm-attacks-and-activity" class="hash-link" aria-label="Direct link to Objective — Study rhythm, attacks and activity" title="Direct link to Objective — Study rhythm, attacks and activity" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="musicological-questions-4">Musicological questions<a href="#musicological-questions-4" class="hash-link" aria-label="Direct link to Musicological questions" title="Direct link to Musicological questions" translate="no">​</a></h3>
+<ul>
+<li class="">Where do events concentrate?</li>
+<li class="">Do attacks form a pulse, gesture or texture?</li>
+<li class="">Does activity become more regular, dense or discontinuous?</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tools">Tools<a href="#tools" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
+<ul>
+<li class="">waveform for visible impacts;</li>
+<li class="">Onset Strength for the prominence of event beginnings;</li>
+<li class="">Attack Time for their morphology;</li>
+<li class="">Spectral Flux for changes between frames;</li>
+<li class="">complexity in increase mode to locate emerging bands;</li>
+<li class="">Zero Crossing Rate for some noisy or highly active textures.</li>
+</ul>
+<p>An onset detector does not automatically provide musical rhythm. Peaks must be grouped, hierarchized and interpreted according to tempo, any meter, accentuation and texture.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective--study-stereo-space">Objective — Study stereo space<a href="#objective--study-stereo-space" class="hash-link" aria-label="Direct link to Objective — Study stereo space" title="Direct link to Objective — Study stereo space" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="musicological-questions-5">Musicological questions<a href="#musicological-questions-5" class="hash-link" aria-label="Direct link to Musicological questions" title="Direct link to Musicological questions" translate="no">​</a></h3>
+<ul>
+<li class="">How are events distributed between left, center and right?</li>
+<li class="">Does width vary with register?</li>
+<li class="">Which materials belong to the center and which to the lateral environment?</li>
+<li class="">Does spatialization contribute to form?</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-combination-7">Recommended combination<a href="#recommended-combination-7" class="hash-link" aria-label="Direct link to Recommended combination" title="Direct link to Recommended combination" translate="no">​</a></h3>
+<table><thead><tr><th>Dimension</th><th>Representation</th><th>Descriptor</th></tr></thead><tbody><tr><td>Left/right position by frequency</td><td>Stereo balance spectrogram</td><td>Stereo Balance</td></tr><tr><td>Center versus width</td><td>MID/SIDE spectrogram</td><td>MID/SIDE Ratio</td></tr><tr><td>Overall evolution</td><td>Curves of both descriptors</td><td>Comparison with formal segments</td></tr></tbody></table>
+<p>Representations show where the phenomenon lies spectrally; descriptors summarize its overall trend. Listening on headphones and loudspeakers remains essential.</p>
+<p>High SIDE content is not necessarily a “sound far to the side”. It may result from reverberation, delay, phase opposition or different channel content.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective--identify-repetitions-transformations-and-families">Objective — Identify repetitions, transformations and families<a href="#objective--identify-repetitions-transformations-and-families" class="hash-link" aria-label="Direct link to Objective — Identify repetitions, transformations and families" title="Direct link to Objective — Identify repetitions, transformations and families" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="musicological-questions-6">Musicological questions<a href="#musicological-questions-6" class="hash-link" aria-label="Direct link to Musicological questions" title="Direct link to Musicological questions" translate="no">​</a></h3>
+<ul>
+<li class="">Does material return unchanged or transformed?</li>
+<li class="">What remains invariant: timbre, rhythm, harmony, contour or energy?</li>
+<li class="">Can events be grouped into families?</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tools-1">Tools<a href="#tools-1" class="hash-link" aria-label="Direct link to Tools" title="Direct link to Tools" translate="no">​</a></h3>
+<table><thead><tr><th>Type of resemblance</th><th>Preferred tools</th></tr></thead><tbody><tr><td>Timbral</td><td>MFCC, spectrogram, SSM</td></tr><tr><td>Harmonic</td><td>Chromagram, pitch-based SSM</td></tr><tr><td>Energy-related</td><td>RMS, Loudness</td></tr><tr><td>Overall spectral</td><td>Centroid, Flatness, Rolloff, Entropy</td></tr><tr><td>Morphological</td><td>Annotations, visual spectrogram comparison</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="approach">Approach<a href="#approach" class="hash-link" aria-label="Direct link to Approach" title="Direct link to Approach" translate="no">​</a></h3>
+<ol>
+<li class="">Use the SSM or an overview to detect a potential resemblance.</li>
+<li class="">Isolate the passages and listen to them consecutively.</li>
+<li class="">Describe what seems invariant and what varies.</li>
+<li class="">Choose descriptors corresponding to those dimensions.</li>
+<li class="">Annotate the relationship: repetition, variation, derivation, contrast or simple acoustic resemblance.</li>
+</ol>
+<p>Acoustic similarity does not imply a common origin or function. Two events can resemble one another without belonging to the same musical material.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective--compare-versions-performances-or-works">Objective — Compare versions, performances or works<a href="#objective--compare-versions-performances-or-works" class="hash-link" aria-label="Direct link to Objective — Compare versions, performances or works" title="Direct link to Objective — Compare versions, performances or works" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="comparison-conditions">Comparison conditions<a href="#comparison-conditions" class="hash-link" aria-label="Direct link to Comparison conditions" title="Direct link to Comparison conditions" translate="no">​</a></h3>
+<p>To make curves and images comparable, retain:</p>
+<ul>
+<li class="">the same sample rate;</li>
+<li class="">the same window sizes and types;</li>
+<li class="">the same hop;</li>
+<li class="">the same frequency bounds;</li>
+<li class="">the same thresholds and contrasts;</li>
+<li class="">the same palettes and display dynamics;</li>
+<li class="">the same channel selection.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-can-vary-independently-of-performance">What can vary independently of performance<a href="#what-can-vary-independently-of-performance" class="hash-link" aria-label="Direct link to What can vary independently of performance" title="Direct link to What can vary independently of performance" translate="no">​</a></h3>
+<ul>
+<li class="">recording technique and microphone placement;</li>
+<li class="">venue acoustics;</li>
+<li class="">mixing and mastering;</li>
+<li class="">background noise;</li>
+<li class="">dynamic compression;</li>
+<li class="">tuning and reference pitch;</li>
+<li class="">recording speed or editing.</li>
+</ul>
+<p>Document these factors. A centroid difference between two performances may arise from playing, but also from microphones or equalization.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="alignment">Alignment<a href="#alignment" class="hash-link" aria-label="Direct link to Alignment" title="Direct link to Alignment" translate="no">​</a></h3>
+<p>When durations differ, compare corresponding events or segments rather than absolute times. Annotations then provide a common musicological layer across different temporalities.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="choose-from-the-question-not-the-tool">Choose from the question, not the tool<a href="#choose-from-the-question-not-the-tool" class="hash-link" aria-label="Direct link to Choose from the question, not the tool" title="Direct link to Choose from the question, not the tool" translate="no">​</a></h2>
+<table><thead><tr><th>Objective</th><th>Starting view</th><th>Measures to add</th><th>Validation</th></tr></thead><tbody><tr><td>General navigation</td><td>Waveform + spectrogram</td><td>RMS, Flux</td><td>Listen around markers</td></tr><tr><td>Form and segmentation</td><td>SSM + spectrogram</td><td>Flux, Onset, RMS, MFCC</td><td>Compare boundaries</td></tr><tr><td>Timbre and texture</td><td>Spectrogram + MFCC</td><td>Centroid, Flatness, Entropy, Inharmonicity</td><td>Comparative listening</td></tr><tr><td>Pitch and harmony</td><td>Logarithmic + chromagram</td><td>Peak Frequency, Harmonic Ratio</td><td>Listening and tonal context</td></tr><tr><td>Dynamics and density</td><td>Waveform</td><td>RMS, Loudness, Rolloff</td><td>Compare with orchestration</td></tr><tr><td>Space</td><td>Stereo balance + MID/SIDE</td><td>Stereo Balance, MID/SIDE Ratio</td><td>Multichannel listening</td></tr><tr><td>Repetitions</td><td>SSM</td><td>Descriptors related to the presumed invariant</td><td>A/B listening and annotations</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="three-temporal-scales">Three temporal scales<a href="#three-temporal-scales" class="hash-link" aria-label="Direct link to Three temporal scales" title="Direct link to Three temporal scales" translate="no">​</a></h2>
+<p>A work often needs to be observed at several scales.</p>
+<table><thead><tr><th>Scale</th><th>Objects</th><th>Tools</th></tr></thead><tbody><tr><td>Micro</td><td>Attack, grain, partial, brief transition</td><td>Short window, waveform, spectrogram, Onset</td></tr><tr><td>Meso</td><td>Gesture, motif, phrase, texture, sequence</td><td>Spectrogram, chromagram, MFCC, descriptors</td></tr><tr><td>Macro</td><td>Section, process, return, overall form</td><td>SSM, overview images, segments and annotations</td></tr></tbody></table>
+<p>A strong micro-scale boundary is not necessarily important at the formal scale. Conversely, a gradual formal transition may produce no striking local peak.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-general-protocol-in-ianalyse">A general protocol in iAnalyse<a href="#a-general-protocol-in-ianalyse" class="hash-link" aria-label="Direct link to A general protocol in iAnalyse" title="Direct link to A general protocol in iAnalyse" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-prepare">1. Prepare<a href="#1-prepare" class="hash-link" aria-label="Direct link to 1. Prepare" title="Direct link to 1. Prepare" translate="no">​</a></h3>
+<ul>
+<li class="">identify the source, version and recording conditions;</li>
+<li class="">note duration, channels, any reference tuning and file-specific features;</li>
+<li class="">formulate an initial musical question.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-map">2. Map<a href="#2-map" class="hash-link" aria-label="Direct link to 2. Map" title="Direct link to 2. Map" translate="no">​</a></h3>
+<ul>
+<li class="">display waveform and spectrogram;</li>
+<li class="">browse the file quickly;</li>
+<li class="">place provisional markers;</li>
+<li class="">produce an SSM if duration or form justifies it.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-listen">3. Listen<a href="#3-listen" class="hash-link" aria-label="Direct link to 3. Listen" title="Direct link to 3. Listen" translate="no">​</a></h3>
+<ul>
+<li class="">listen to identified regions in context;</li>
+<li class="">describe what is heard before assigning a function;</li>
+<li class="">adjust markers and create segments.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-measure">4. Measure<a href="#4-measure" class="hash-link" aria-label="Direct link to 4. Measure" title="Direct link to 4. Measure" translate="no">​</a></h3>
+<ul>
+<li class="">choose a small number of descriptors directly related to the question;</li>
+<li class="">keep parameters consistent;</li>
+<li class="">identify convergence, divergence and outliers.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-interpret">5. Interpret<a href="#5-interpret" class="hash-link" aria-label="Direct link to 5. Interpret" title="Direct link to 5. Interpret" translate="no">​</a></h3>
+<ul>
+<li class="">turn observations into hypotheses;</li>
+<li class="">associate each hypothesis with supporting and contrary evidence;</li>
+<li class="">compare occurrences and exceptions.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-document">6. Document<a href="#6-document" class="hash-link" aria-label="Direct link to 6. Document" title="Direct link to 6. Document" translate="no">​</a></h3>
+<ul>
+<li class="">record results in annotations;</li>
+<li class="">distinguish description, hypothesis and interpretation;</li>
+<li class="">connect the relevant events or segments;</li>
+<li class="">retain settings needed for reproducibility.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-revise">7. Revise<a href="#7-revise" class="hash-link" aria-label="Direct link to 7. Revise" title="Direct link to 7. Revise" translate="no">​</a></h3>
+<ul>
+<li class="">return to listening without looking at the curves;</li>
+<li class="">check that the interpretation remains audible and relevant;</li>
+<li class="">actively seek passages that contradict it;</li>
+<li class="">reformulate the hypothesis if necessary.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-role-of-annotation">The role of annotation<a href="#the-role-of-annotation" class="hash-link" aria-label="Direct link to The role of annotation" title="Direct link to The role of annotation" translate="no">​</a></h2>
+<p>Annotation is where computed data becomes a musicological object. It may contain:</p>
+<ul>
+<li class="">the phenomenon’s location;</li>
+<li class="">a perceptual description;</li>
+<li class="">visual and numerical clues;</li>
+<li class="">the analytical hypothesis;</li>
+<li class="">degree of certainty;</li>
+<li class="">relationships with other events;</li>
+<li class="">settings used;</li>
+<li class="">objections or alternative interpretations.</li>
+</ul>
+<p>A useful formulation explicitly separates levels:</p>
+<blockquote>
+<p><strong>Observation:</strong> simultaneous increases in RMS, centroid and spectral flux between 12:40 and 12:52.<br>
+<strong>Listening:</strong> accumulation of layers, gradual opening of the high register and accelerating attacks.<br>
+<strong>Hypothesis:</strong> an intensification process preparing the articulation at 12:53.<br>
+<strong>Reservation:</strong> the centroid increase may be amplified by the entry of a single high source.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="epistemological-limitations">Epistemological limitations<a href="#epistemological-limitations" class="hash-link" aria-label="Direct link to Epistemological limitations" title="Direct link to Epistemological limitations" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="computation-depends-on-choices">Computation depends on choices<a href="#computation-depends-on-choices" class="hash-link" aria-label="Direct link to Computation depends on choices" title="Direct link to Computation depends on choices" translate="no">​</a></h3>
+<p>Window, hop, threshold, normalization, bounds and palette construct the observed object. A visualization is a technical interpretation of the signal before it is interpreted musically.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-measurable-does-not-encompass-everything-audible">What is measurable does not encompass everything audible<a href="#what-is-measurable-does-not-encompass-everything-audible" class="hash-link" aria-label="Direct link to What is measurable does not encompass everything audible" title="Direct link to What is measurable does not encompass everything audible" translate="no">​</a></h3>
+<p>Available descriptors emphasize certain dimensions: energy, spectral distribution, change, harmony or spatiality. They represent phrasing, intention, function, syntax, perceived causality, gesture and cultural meaning less directly.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-visible-can-dominate-listening">The visible can dominate listening<a href="#the-visible-can-dominate-listening" class="hash-link" aria-label="Direct link to The visible can dominate listening" title="Direct link to The visible can dominate listening" translate="no">​</a></h3>
+<p>A salient graphical shape attracts attention and may lead to overestimating a perceptually minor phenomenon. Alternating listening with and without the display is useful.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="repeatability-is-not-neutrality">Repeatability is not neutrality<a href="#repeatability-is-not-neutrality" class="hash-link" aria-label="Direct link to Repeatability is not neutrality" title="Direct link to Repeatability is not neutrality" translate="no">​</a></h3>
+<p>A reproducible calculation may rely on a model unsuited to the material. Numerical stability guarantees that the same procedure produces the same result, not that this result is the best musical description.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="correlation-is-not-function">Correlation is not function<a href="#correlation-is-not-function" class="hash-link" aria-label="Direct link to Correlation is not function" title="Direct link to Correlation is not function" translate="no">​</a></h3>
+<p>Two parameters may evolve together without sharing a cause or function. Their relationship must be examined in the work’s context.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="good-wording-practices">Good wording practices<a href="#good-wording-practices" class="hash-link" aria-label="Direct link to Good wording practices" title="Direct link to Good wording practices" translate="no">​</a></h2>
+<p>Prefer:</p>
+<ul>
+<li class="">“the centroid increases” to “the sound becomes tense”;</li>
+<li class="">“a similarity appears in the SSM” to “the theme returns”;</li>
+<li class="">“pitch class D is dominant” to “the chord is D major”;</li>
+<li class="">“the SIDE ratio increases” to “the source moves sideways”;</li>
+<li class="">“flux indicates a spectral change” to “a new section begins”.</li>
+</ul>
+<p>Interpretive wording may follow, supported by arguments that justify moving from one level to another.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-of-an-integrated-analytical-journey">Example of an integrated analytical journey<a href="#example-of-an-integrated-analytical-journey" class="hash-link" aria-label="Direct link to Example of an integrated analytical journey" title="Direct link to Example of an integrated analytical journey" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="question">Question<a href="#question" class="hash-link" aria-label="Direct link to Question" title="Direct link to Question" translate="no">​</a></h3>
+<p>How does a long electroacoustic work build its major articulations through timbral transformations?</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="journey">Journey<a href="#journey" class="hash-link" aria-label="Direct link to Journey" title="Direct link to Journey" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">1. Forme d&#x27;onde + spectrogramme</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   -&gt; repérage des grandes masses et silences</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2. SSM</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   -&gt; recherche de zones stables, retours et transitions</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">3. Marqueurs provisoires</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   -&gt; localisation des frontières candidates</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">4. Flux spectral + RMS + centroïde + flatness</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   -&gt; distinction entre changement d&#x27;énergie, de registre et de texture</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">5. MFCC et spectrogramme de complexité</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   -&gt; observation des transformations timbrales internes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">6. Écoute ciblée</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   -&gt; qualification des gestes, matières, continuités et ruptures</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">7. Segmentation et annotations</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   -&gt; formulation d&#x27;une hypothèse formelle</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">8. Retour à l&#x27;écoute intégrale</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   -&gt; vérification de la pertinence perceptive de la segmentation</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="expected-result">Expected result<a href="#expected-result" class="hash-link" aria-label="Direct link to Expected result" title="Direct link to Expected result" translate="no">​</a></h3>
+<p>The result is not a segmentation “discovered” by the algorithm, but an analytical proposal supported by computed, visual and auditory evidence.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion">Conclusion<a href="#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion" translate="no">​</a></h2>
+<p>From a digital musicology perspective, iAnalyse does more than produce images or curves. It organizes an inquiry into sound:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">naviguer pour trouver</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">mémoriser pour comparer</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">mesurer pour préciser</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">écouter pour comprendre</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">annoter pour argumenter</span><br></span></code></pre></div></div>
+<p>Representations provide access to overall forms, descriptors isolate acoustic dimensions, and annotations build the bridge to musical analysis. Slideshow Documents place this reasoning on the score; Video Documents extend it to framing, editing, gesture and performance.</p>
+<p>Their combination supports a practice in which the computer does not conclude on the analyst’s behalf, but helps them see, hear, retrieve, compare, communicate and formulate.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/ianalyse6/en/analysis/audio-descriptors-form"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Audio descriptors — formulas</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#assisted-analysis-as-a-tool" class="table-of-contents__link toc-highlight">Assisted analysis as a tool</a></li><li><a href="#from-signal-to-interpretation-four-distinct-levels" class="table-of-contents__link toc-highlight">From signal to interpretation: four distinct levels</a></li><li><a href="#representations-and-descriptors-complementary-approaches" class="table-of-contents__link toc-highlight">Representations and descriptors: complementary approaches</a><ul><li><a href="#representations-provide-an-overview" class="table-of-contents__link toc-highlight">Representations provide an overview</a></li><li><a href="#descriptors-isolate-a-property" class="table-of-contents__link toc-highlight">Descriptors isolate a property</a></li><li><a href="#combining-them-is-more-productive-than-using-either-alone" class="table-of-contents__link toc-highlight">Combining them is more productive than using either alone</a></li></ul></li><li><a href="#function-1--navigate-long-audio-files" class="table-of-contents__link toc-highlight">Function 1 — Navigate long audio files</a><ul><li><a href="#the-challenge" class="table-of-contents__link toc-highlight">The challenge</a></li><li><a href="#preferred-tools" class="table-of-contents__link toc-highlight">Preferred tools</a></li><li><a href="#procedure" class="table-of-contents__link toc-highlight">Procedure</a></li><li><a href="#precaution" class="table-of-contents__link toc-highlight">Precaution</a></li></ul></li><li><a href="#function-2--support-musical-memory" class="table-of-contents__link toc-highlight">Function 2 — Support musical memory</a><ul><li><a href="#visualization-as-external-memory" class="table-of-contents__link toc-highlight">Visualization as external memory</a></li><li><a href="#the-self-similarity-matrix-ssm-as-a-synopsis" class="table-of-contents__link toc-highlight">The self-similarity matrix (SSM) as a synopsis</a></li><li><a href="#choose-what-the-visual-memory-should-retain" class="table-of-contents__link toc-highlight">Choose what the visual memory should retain</a></li><li><a href="#build-an-analytical-image-rather-than-merely-recognize-an-image" class="table-of-contents__link toc-highlight">Build an analytical image, rather than merely recognize an image</a></li></ul></li><li><a href="#function-3--identify-clues-to-investigate-through-listening" class="table-of-contents__link toc-highlight">Function 3 — Identify clues to investigate through listening</a><ul><li><a href="#what-is-a-clue" class="table-of-contents__link toc-highlight">What is a clue?</a></li><li><a href="#triangulation" class="table-of-contents__link toc-highlight">Triangulation</a></li></ul></li><li><a href="#further-functions-of-assisted-analysis" class="table-of-contents__link toc-highlight">Further functions of assisted analysis</a><ul><li><a href="#function-4--compare" class="table-of-contents__link toc-highlight">Function 4 — Compare</a></li><li><a href="#function-5--experiment-and-discover" class="table-of-contents__link toc-highlight">Function 5 — Experiment and discover</a></li><li><a href="#function-6--make-observations-explicit-and-reproducible" class="table-of-contents__link toc-highlight">Function 6 — Make observations explicit and reproducible</a></li><li><a href="#function-7--communicate-and-teach" class="table-of-contents__link toc-highlight">Function 7 — Communicate and teach</a></li><li><a href="#function-8--document-and-argue" class="table-of-contents__link toc-highlight">Function 8 — Document and argue</a></li><li><a href="#function-9--connect-analysis-and-musical-practice" class="table-of-contents__link toc-highlight">Function 9 — Connect analysis and musical practice</a></li></ul></li><li><a href="#multimodal-analysis" class="table-of-contents__link toc-highlight">Multimodal analysis</a></li><li><a href="#function-10--annotate-a-score-in-a-slideshow-document" class="table-of-contents__link toc-highlight">Function 10 — Annotate a score in a Slideshow Document</a><ul><li><a href="#principle" class="table-of-contents__link toc-highlight">Principle</a></li><li><a href="#what-score-annotation-enables" class="table-of-contents__link toc-highlight">What score annotation enables</a></li><li><a href="#spatial-and-temporal-annotation" class="table-of-contents__link toc-highlight">Spatial and temporal annotation</a></li><li><a href="#uses-in-musical-analysis" class="table-of-contents__link toc-highlight">Uses in musical analysis</a></li><li><a href="#communication-teaching-and-outreach" class="table-of-contents__link toc-highlight">Communication, teaching and outreach</a></li><li><a href="#methodological-risks" class="table-of-contents__link toc-highlight">Methodological risks</a></li></ul></li><li><a href="#function-11--annotate-a-video-in-a-video-document" class="table-of-contents__link toc-highlight">Function 11 — Annotate a video in a Video Document</a><ul><li><a href="#principle-1" class="table-of-contents__link toc-highlight">Principle</a></li><li><a href="#what-video-annotation-enables" class="table-of-contents__link toc-highlight">What video annotation enables</a></li><li><a href="#analyze-music-for-moving-images" class="table-of-contents__link toc-highlight">Analyze music for moving images</a></li><li><a href="#analyze-gesture-and-performance" class="table-of-contents__link toc-highlight">Analyze gesture and performance</a></li><li><a href="#analyze-dance-and-movement" class="table-of-contents__link toc-highlight">Analyze dance and movement</a></li><li><a href="#analyze-recorded-practices" class="table-of-contents__link toc-highlight">Analyze recorded practices</a></li><li><a href="#methodological-risks-1" class="table-of-contents__link toc-highlight">Methodological risks</a></li></ul></li><li><a href="#function-12--build-multimedia-analytical-journeys" class="table-of-contents__link toc-highlight">Function 12 — Build multimedia analytical journeys</a><ul><li><a href="#guided-listening-journeys" class="table-of-contents__link toc-highlight">Guided listening journeys</a></li><li><a href="#synchronized-analytical-edition" class="table-of-contents__link toc-highlight">Synchronized analytical edition</a></li><li><a href="#teaching-and-self-study-materials" class="table-of-contents__link toc-highlight">Teaching and self-study materials</a></li><li><a href="#scholarly-communication-and-public-outreach" class="table-of-contents__link toc-highlight">Scholarly communication and public outreach</a></li></ul></li><li><a href="#objective--analyze-relationships-between-score-and-sonic-realization" class="table-of-contents__link toc-highlight">Objective — Analyze relationships between score and sonic realization</a><ul><li><a href="#questions" class="table-of-contents__link toc-highlight">Questions</a></li><li><a href="#recommended-combination" class="table-of-contents__link toc-highlight">Recommended combination</a></li><li><a href="#pipeline" class="table-of-contents__link toc-highlight">Pipeline</a></li></ul></li><li><a href="#objective--analyze-music-for-moving-images" class="table-of-contents__link toc-highlight">Objective — Analyze music for moving images</a><ul><li><a href="#questions-1" class="table-of-contents__link toc-highlight">Questions</a></li><li><a href="#recommended-combination-1" class="table-of-contents__link toc-highlight">Recommended combination</a></li><li><a href="#pipeline-1" class="table-of-contents__link toc-highlight">Pipeline</a></li></ul></li><li><a href="#objective--study-gesture-performance-and-interaction" class="table-of-contents__link toc-highlight">Objective — Study gesture, performance and interaction</a><ul><li><a href="#questions-2" class="table-of-contents__link toc-highlight">Questions</a></li><li><a href="#recommended-combination-2" class="table-of-contents__link toc-highlight">Recommended combination</a></li></ul></li><li><a href="#objective--segment-and-study-form" class="table-of-contents__link toc-highlight">Objective — Segment and study form</a><ul><li><a href="#musicological-questions" class="table-of-contents__link toc-highlight">Musicological questions</a></li><li><a href="#recommended-combination-3" class="table-of-contents__link toc-highlight">Recommended combination</a></li><li><a href="#analytical-pipeline" class="table-of-contents__link toc-highlight">Analytical pipeline</a></li></ul></li><li><a href="#objective--study-timbre-texture-and-playing-techniques" class="table-of-contents__link toc-highlight">Objective — Study timbre, texture and playing techniques</a><ul><li><a href="#musicological-questions-1" class="table-of-contents__link toc-highlight">Musicological questions</a></li><li><a href="#recommended-combination-4" class="table-of-contents__link toc-highlight">Recommended combination</a></li><li><a href="#method" class="table-of-contents__link toc-highlight">Method</a></li></ul></li><li><a href="#objective--study-pitch-register-and-harmony" class="table-of-contents__link toc-highlight">Objective — Study pitch, register and harmony</a><ul><li><a href="#musicological-questions-2" class="table-of-contents__link toc-highlight">Musicological questions</a></li><li><a href="#recommended-combination-5" class="table-of-contents__link toc-highlight">Recommended combination</a></li><li><a href="#precautions" class="table-of-contents__link toc-highlight">Precautions</a></li></ul></li><li><a href="#objective--study-dynamics-energy-and-density" class="table-of-contents__link toc-highlight">Objective — Study dynamics, energy and density</a><ul><li><a href="#musicological-questions-3" class="table-of-contents__link toc-highlight">Musicological questions</a></li><li><a href="#recommended-combination-6" class="table-of-contents__link toc-highlight">Recommended combination</a></li><li><a href="#example-of-reasoning" class="table-of-contents__link toc-highlight">Example of reasoning</a></li></ul></li><li><a href="#objective--study-rhythm-attacks-and-activity" class="table-of-contents__link toc-highlight">Objective — Study rhythm, attacks and activity</a><ul><li><a href="#musicological-questions-4" class="table-of-contents__link toc-highlight">Musicological questions</a></li><li><a href="#tools" class="table-of-contents__link toc-highlight">Tools</a></li></ul></li><li><a href="#objective--study-stereo-space" class="table-of-contents__link toc-highlight">Objective — Study stereo space</a><ul><li><a href="#musicological-questions-5" class="table-of-contents__link toc-highlight">Musicological questions</a></li><li><a href="#recommended-combination-7" class="table-of-contents__link toc-highlight">Recommended combination</a></li></ul></li><li><a href="#objective--identify-repetitions-transformations-and-families" class="table-of-contents__link toc-highlight">Objective — Identify repetitions, transformations and families</a><ul><li><a href="#musicological-questions-6" class="table-of-contents__link toc-highlight">Musicological questions</a></li><li><a href="#tools-1" class="table-of-contents__link toc-highlight">Tools</a></li><li><a href="#approach" class="table-of-contents__link toc-highlight">Approach</a></li></ul></li><li><a href="#objective--compare-versions-performances-or-works" class="table-of-contents__link toc-highlight">Objective — Compare versions, performances or works</a><ul><li><a href="#comparison-conditions" class="table-of-contents__link toc-highlight">Comparison conditions</a></li><li><a href="#what-can-vary-independently-of-performance" class="table-of-contents__link toc-highlight">What can vary independently of performance</a></li><li><a href="#alignment" class="table-of-contents__link toc-highlight">Alignment</a></li></ul></li><li><a href="#choose-from-the-question-not-the-tool" class="table-of-contents__link toc-highlight">Choose from the question, not the tool</a></li><li><a href="#three-temporal-scales" class="table-of-contents__link toc-highlight">Three temporal scales</a></li><li><a href="#a-general-protocol-in-ianalyse" class="table-of-contents__link toc-highlight">A general protocol in iAnalyse</a><ul><li><a href="#1-prepare" class="table-of-contents__link toc-highlight">1. Prepare</a></li><li><a href="#2-map" class="table-of-contents__link toc-highlight">2. Map</a></li><li><a href="#3-listen" class="table-of-contents__link toc-highlight">3. Listen</a></li><li><a href="#4-measure" class="table-of-contents__link toc-highlight">4. Measure</a></li><li><a href="#5-interpret" class="table-of-contents__link toc-highlight">5. Interpret</a></li><li><a href="#6-document" class="table-of-contents__link toc-highlight">6. Document</a></li><li><a href="#7-revise" class="table-of-contents__link toc-highlight">7. Revise</a></li></ul></li><li><a href="#the-role-of-annotation" class="table-of-contents__link toc-highlight">The role of annotation</a></li><li><a href="#epistemological-limitations" class="table-of-contents__link toc-highlight">Epistemological limitations</a><ul><li><a href="#computation-depends-on-choices" class="table-of-contents__link toc-highlight">Computation depends on choices</a></li><li><a href="#what-is-measurable-does-not-encompass-everything-audible" class="table-of-contents__link toc-highlight">What is measurable does not encompass everything audible</a></li><li><a href="#the-visible-can-dominate-listening" class="table-of-contents__link toc-highlight">The visible can dominate listening</a></li><li><a href="#repeatability-is-not-neutrality" class="table-of-contents__link toc-highlight">Repeatability is not neutrality</a></li><li><a href="#correlation-is-not-function" class="table-of-contents__link toc-highlight">Correlation is not function</a></li></ul></li><li><a href="#good-wording-practices" class="table-of-contents__link toc-highlight">Good wording practices</a></li><li><a href="#example-of-an-integrated-analytical-journey" class="table-of-contents__link toc-highlight">Example of an integrated analytical journey</a><ul><li><a href="#question" class="table-of-contents__link toc-highlight">Question</a></li><li><a href="#journey" class="table-of-contents__link toc-highlight">Journey</a></li><li><a href="#expected-result" class="table-of-contents__link toc-highlight">Expected result</a></li></ul></li><li><a href="#conclusion" class="table-of-contents__link toc-highlight">Conclusion</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__links text--center"><div class="footer__links"><a class="footer__link-item" href="/ianalyse6/en/privacy">Privacy Policy</a><span class="footer__link-separator">·</span><a class="footer__link-item" href="/ianalyse6/en/support">Support</a></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2026 Pierre Couprie</div></div></div></footer></div>
 </body>
 </html>

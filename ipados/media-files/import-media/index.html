@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Importer des médias | iAnalyse 6</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://pierrecouprie.github.io/ianalyse6/ipados/media-files/import-media"><meta data-rh="true" property="og:locale" content="fr"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="fr"><meta data-rh="true" name="docsearch:language" content="fr"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Importer des médias | iAnalyse 6"><meta data-rh="true" name="description" content="L’import ajoute des fichiers au Projet afin qu’ils puissent être lus, annotés, représentés ou utilisés dans un Document."><meta data-rh="true" property="og:description" content="L’import ajoute des fichiers au Projet afin qu’ils puissent être lus, annotés, représentés ou utilisés dans un Document."><link data-rh="true" rel="icon" href="/ianalyse6/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://pierrecouprie.github.io/ianalyse6/ipados/media-files/import-media"><link data-rh="true" rel="alternate" href="https://pierrecouprie.github.io/ianalyse6/ipados/media-files/import-media" hreflang="fr"><link data-rh="true" rel="alternate" href="https://pierrecouprie.github.io/ianalyse6/en/ipados/media-files/import-media" hreflang="en"><link data-rh="true" rel="alternate" href="https://pierrecouprie.github.io/ianalyse6/ipados/media-files/import-media" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Importer des médias","item":"https://pierrecouprie.github.io/ianalyse6/ipados/media-files/import-media"}]}</script><link rel="stylesheet" href="/ianalyse6/assets/css/styles.18eb58d7.css">
-<script src="/ianalyse6/assets/js/runtime~main.3f0e594f.js" defer="defer"></script>
-<script src="/ianalyse6/assets/js/main.e186958c.js" defer="defer"></script>
+<script src="/ianalyse6/assets/js/runtime~main.14a958d4.js" defer="defer"></script>
+<script src="/ianalyse6/assets/js/main.e12e00c4.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -45,6 +45,9 @@
 <ul>
 <li class="">JPG, JPEG, BMP, PNG, TIF, TIFF, HEIF et HEIC.</li>
 </ul>
+<blockquote>
+<p>Les images sont automatiquement converties au format HEIC dans le Projet.</p>
+</blockquote>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="importer-un-pdf">Importer un PDF<a href="#importer-un-pdf" class="hash-link" aria-label="Lien direct vers Importer un PDF" title="Lien direct vers Importer un PDF" translate="no">​</a></h2>
 <p>Les PDF sont importés sous la forme d&#x27;images.</p>
 <p>Pour importer un PDF :</p>
@@ -55,6 +58,9 @@
 <li class="">Chaque image peut être affichée dans la vue principale.</li>
 <li class="">Si vous ouvrez l&#x27;inspecteur de propriétés, il affiche toutes les caractéristiques du fichier.</li>
 </ol>
+<blockquote>
+<p>Les pages du PDF sont enregistrées au format HEIC dans le Projet.</p>
+</blockquote>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="importer-des-fichiers-musicaux">Importer des fichiers musicaux<a href="#importer-des-fichiers-musicaux" class="hash-link" aria-label="Lien direct vers Importer des fichiers musicaux" title="Lien direct vers Importer des fichiers musicaux" translate="no">​</a></h2>
 <p>iAnalyse peut importer des fichiers MIDI, MusicXML et MEI. Ces fichiers sont transformés dans un format qui peut servir de média pour la création d&#x27;un Document. Le lecteur audiovisuel utilise le synthétiseur interne à macOS ou iPadOS pour lire le fichier.</p>
 <p>Pour importer un fichier musical :</p>
@@ -64,8 +70,10 @@
 <li class="">Chaque fichier peut être affiché dans la vue principale.</li>
 <li class="">Si vous ouvrez l&#x27;inspecteur de propriétés, il affiche toutes les caractéristiques du fichier.</li>
 </ol>
+<p>Les formats supportés sont : MID, MIDI, MusicXML, MXL et MEI.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="importer-des-données">Importer des données<a href="#importer-des-données" class="hash-link" aria-label="Lien direct vers Importer des données" title="Lien direct vers Importer des données" translate="no">​</a></h2>
 <p>Les fichiers de données permettent d’ajouter au Projet des valeurs temporelles calculées ou produites par un autre logiciel. Ces données peuvent ensuite être affichées dans des représentations graphiques ou utilisées dans certains calculs.</p>
+<p>Les formats supportés sont TXT et CSV.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="importer-un-fichier-de-données">Importer un fichier de données<a href="#importer-un-fichier-de-données" class="hash-link" aria-label="Lien direct vers Importer un fichier de données" title="Lien direct vers Importer un fichier de données" translate="no">​</a></h3>
 <p>Un fichier de données contient généralement une première colonne de temps, puis une ou plusieurs colonnes de valeurs.</p>
 <p>Exemple de structure :</p>
@@ -84,8 +92,13 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="importer-une-segmentation">Importer une segmentation<a href="#importer-une-segmentation" class="hash-link" aria-label="Lien direct vers Importer une segmentation" title="Lien direct vers Importer une segmentation" translate="no">​</a></h2>
 <p>Vous pouvez importer une segmentation lorsque la structure temporelle a été préparée dans un autre outil. Après l’import, vérifiez les débuts, fins et noms de segments dans la ligne temporelle.</p>
 <p>Une segmentation importée peut ensuite être modifiée comme une segmentation créée directement dans iAnalyse.</p>
+<p>Un fichier de segmentation contient une première colonne de temps, puis une colonne avec les étiquettes des segments.</p>
+<p>Exemple de structure :</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">0.000000    Partie 1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">10.011610   Partie 2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">26          Partie 3</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">45.05       Partie 4</span><br></span></code></pre></div></div>
+<p>La structure des données doit suivre ce modèle. Les formats supportés sont TXT et CSV.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="importer-un-fichier-scala">Importer un fichier Scala<a href="#importer-un-fichier-scala" class="hash-link" aria-label="Lien direct vers Importer un fichier Scala" title="Lien direct vers Importer un fichier Scala" translate="no">​</a></h2>
 <p>Les fichiers Scala permettent d’ajouter des informations liées aux échelles ou aux hauteurs. Après import, vérifiez que les valeurs correspondent bien au contexte musical du Projet.</p>
+<p>Le format supporté est SCL.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="utiliser-les-données-importées">Utiliser les données importées<a href="#utiliser-les-données-importées" class="hash-link" aria-label="Lien direct vers Utiliser les données importées" title="Lien direct vers Utiliser les données importées" translate="no">​</a></h2>
 <p>Une fois importées, les données peuvent être sélectionnées dans les représentations compatibles : graphique, gradient, fréquence fondamentale, matrice, chromagramme ou MFCCs selon le type de fichier.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Pages de documentation"><a class="pagination-nav__link pagination-nav__link--prev" href="/ianalyse6/ipados/ipados-specific/project-strategy"><div class="pagination-nav__sublabel">Précédent</div><div class="pagination-nav__label">Stratégie de Projet</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/ianalyse6/ipados/media-files/manage-imported-files"><div class="pagination-nav__sublabel">Suivant</div><div class="pagination-nav__label">Gérer les fichiers importés</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#importer-un-fichier-audio-ou-vidéo" class="table-of-contents__link toc-highlight">Importer un fichier audio ou vidéo</a></li><li><a href="#importer-une-image" class="table-of-contents__link toc-highlight">Importer une image</a></li><li><a href="#importer-un-pdf" class="table-of-contents__link toc-highlight">Importer un PDF</a></li><li><a href="#importer-des-fichiers-musicaux" class="table-of-contents__link toc-highlight">Importer des fichiers musicaux</a></li><li><a href="#importer-des-données" class="table-of-contents__link toc-highlight">Importer des données</a><ul><li><a href="#importer-un-fichier-de-données" class="table-of-contents__link toc-highlight">Importer un fichier de données</a></li><li><a href="#vérifier-laperçu-avant-import" class="table-of-contents__link toc-highlight">Vérifier l’aperçu avant import</a></li></ul></li><li><a href="#importer-une-segmentation" class="table-of-contents__link toc-highlight">Importer une segmentation</a></li><li><a href="#importer-un-fichier-scala" class="table-of-contents__link toc-highlight">Importer un fichier Scala</a></li><li><a href="#utiliser-les-données-importées" class="table-of-contents__link toc-highlight">Utiliser les données importées</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__links text--center"><div class="footer__links"><a class="footer__link-item" href="/ianalyse6/privacy">Engagement de confidentialité</a><span class="footer__link-separator">·</span><a class="footer__link-item" href="/ianalyse6/support">Support</a></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2026 Pierre Couprie</div></div></div></footer></div>
 </body>
